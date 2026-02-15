@@ -1,0 +1,55 @@
+import Image from "next/image"
+import { ArrowRight } from "lucide-react"
+import { ScrollReveal } from "@/components/scroll-reveal"
+import { blogPosts } from "@/lib/data"
+
+export function InsightsSection() {
+  return (
+    <section className="px-6 py-20 lg:px-10 lg:py-28">
+      <div className="mx-auto max-w-[1400px]">
+        <ScrollReveal>
+          <div className="mb-10 flex items-center justify-between">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              Latest Insights
+            </h2>
+            <a
+              href="#"
+              className="hidden items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-muted-foreground sm:flex"
+            >
+              View All Insights
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </ScrollReveal>
+
+        <div className="grid gap-8 md:grid-cols-2">
+          {blogPosts.map((post, i) => (
+            <ScrollReveal key={i} delay={i * 100}>
+              <a href="#" className="group block">
+                <div className="flex gap-4">
+                  <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-xl md:h-28 md:w-28">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="112px"
+                    />
+                  </div>
+                  <div className="flex flex-col justify-center">
+                    <h3 className="text-base font-semibold leading-snug text-foreground transition-colors group-hover:text-muted-foreground md:text-lg">
+                      {post.title}
+                    </h3>
+                    <p className="mt-2 font-body text-xs text-muted-foreground">
+                      {post.date}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
