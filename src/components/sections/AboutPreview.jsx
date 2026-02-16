@@ -10,7 +10,7 @@ export function AboutPreview() {
           <ScrollReveal className="md:w-2/5">
             <div className="relative aspect-[3/4] max-w-sm overflow-hidden rounded-2xl">
               <img
-                src="/images/headshot.jpg"
+                src="src/images/brandon.png"
                 alt="Portrait of Brandon Torres, a frontend developer"
                 className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
