@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 9% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 9% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 9% 12%;
+    --primary: 220 9% 12%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 6% 94%;
+    --secondary-foreground: 220 9% 12%;
+    --muted: 220 6% 94%;
+    --muted-foreground: 220 5% 45%;
+    --accent: 220 6% 94%;
+    --accent-foreground: 220 9% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 6% 90%;
+    --input: 220 6% 90%;
+    --ring: 220 9% 12%;
+    --radius: 0.5rem;
+
+    --dark-bg: 225 12% 11%;
+    --dark-card: 225 10% 15%;
+    --dark-border: 225 8% 19%;
+    --dark-text: 0 0% 100%;
+    --dark-text-muted: 220 5% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 3px;
+}
+
+.nav-link-underline {
+  position: relative;
+}
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+.nav-link-underline:hover::after {
+  width: 100%;
+}
