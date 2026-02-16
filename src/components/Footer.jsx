@@ -50,7 +50,7 @@ export function Footer() {
 
       <section className="bg-dark-bg px-6 pb-10 pt-12 lg:px-10">
         <div className="mx-auto max-w-[1400px]">
-          <div className="mb-12 flex flex-col gap-8 border-t border-white/10 pt-12 md:flex-row md:items-center md:justify-between">
+          {/* <div className="mb-12 flex flex-col gap-8 border-t border-white/10 pt-12 md:flex-row md:items-center md:justify-between">
             <p className="text-sm text-white/50">Stay connected w/ me.</p>
             <div className="flex items-center border-b border-white/20 pb-2">
               <input
@@ -62,7 +62,7 @@ export function Footer() {
                 <ArrowUpRight className="h-4 w-4" />
               </button>
             </div>
-          </div>
+          </div> */}
 
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div>

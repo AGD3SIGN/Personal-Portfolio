@@ -244,22 +244,6 @@ export default function CaseStudy() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-dark-bg px-6 py-20 text-center lg:px-10 lg:py-28">
-        <div className="mx-auto max-w-[1400px]">
-          <p className="mb-6 text-xs font-medium uppercase tracking-widest text-white/50">
-            HAVE A NICE WORKS? LET&apos;S TALK WITH ME
-          </p>
-          <a
-            href="mailto:hello@brandontorres.dev"
-            className="group inline-flex items-center gap-3 text-4xl font-bold text-white transition-colors hover:text-white/80 md:text-6xl lg:text-7xl"
-          >
-            hello@brandontorres.dev
-            <ArrowUpRight className="h-8 w-8 rounded-full border border-white/30 p-1 transition-colors group-hover:bg-white group-hover:text-dark-bg md:h-12 md:w-12 md:p-2" />
-          </a>
-        </div>
-      </section>
-
       <Footer />
     </main>
   )

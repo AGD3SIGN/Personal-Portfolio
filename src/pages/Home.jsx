@@ -7,7 +7,6 @@ import { ClientsSection } from '@/components/sections/ClientsSection'
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
 import { AwardsSection } from '@/components/sections/AwardsSection'
 import { InsightsSection } from '@/components/sections/InsightsSection'
-import { CTASection } from '@/components/sections/CTASection'
 
 export default function Home() {
   return (
@@ -20,7 +19,6 @@ export default function Home() {
       <TestimonialsSection />
       <AwardsSection />
       <InsightsSection />
-      <CTASection />
       <Footer />
     </main>
   )

@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
-import { ArrowUpRight } from 'lucide-react'
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
 import { ScrollReveal } from '@/components/ScrollReveal'
 import { experience, clients, awards } from '@/lib/data'
+import brandonImg from '@/images/brandon.png'
 
 export default function About() {
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function About() {
           <ScrollReveal>
             <div className="relative aspect-[3/2] overflow-hidden rounded-2xl">
               <img
-                src="src/images/brandon.png"
+                src={brandonImg}
                 alt="Portrait of Brandon Torres, a frontend developer"
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -169,28 +169,6 @@ export default function About() {
               </div>
             </div>
           </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Footer CTA + Footer */}
-      <section className="bg-dark-bg px-6 py-20 text-center lg:px-10 lg:py-28">
-        <div className="mx-auto max-w-[1400px]">
-          <div className="mb-8 flex flex-wrap items-center justify-center gap-4">
-            <a href="/about" className="text-xs font-medium uppercase tracking-widest text-white/50 transition-colors hover:text-white">ABOUT ME</a>
-            <a href="/works" className="text-xs font-medium uppercase tracking-widest text-white/50 transition-colors hover:text-white">WORKS</a>
-            <a href="/contact" className="text-xs font-medium uppercase tracking-widest text-white/50 transition-colors hover:text-white">CONTACT</a>
-          </div>
-          <h2 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
-            {'Want to create something '}
-            <span className="font-light italic text-white/30">awesome?</span>
-          </h2>
-          <a
-            href="/contact"
-            className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-medium text-dark-bg transition-all hover:-translate-y-0.5 hover:shadow-lg"
-          >
-            {"Let's Talk"}
-            <ArrowUpRight className="h-4 w-4" />
-          </a>
         </div>
       </section>
 

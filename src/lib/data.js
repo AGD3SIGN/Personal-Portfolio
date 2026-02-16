@@ -4,7 +4,7 @@ export const projects = [
     title: 'Safe Space',
     category: 'UIUX',
     description: 'A React Therapy Platform for Mental Health',
-    image: 'src/images/TherapyMockup.png',
+    image: '/images/TherapyMockup.png',
     featured: true,
     size: 'large',
     date: 'January 25, 2026',

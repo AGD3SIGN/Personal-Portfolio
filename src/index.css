@@ -63,19 +63,4 @@ html {
   border-radius: 3px;
 }
 
-.nav-link-underline {
-  position: relative;
-}
-.nav-link-underline::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: -2px;
-  left: 0;
-  background-color: currentColor;
-  transition: width 0.3s ease;
-}
-.nav-link-underline:hover::after {
-  width: 100%;
-}
+

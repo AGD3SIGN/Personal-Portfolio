@@ -92,7 +92,7 @@ export default function Contact() {
                 <label className="text-sm font-semibold text-foreground">Email Address</label>
                 <input
                   type="email"
-                  placeholder="Where can I replay?"
+                  placeholder="Where can I reply?"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="mt-3 w-full border-b border-border bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:border-foreground focus:outline-none"
