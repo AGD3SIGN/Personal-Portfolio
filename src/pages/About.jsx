@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { ArrowUpRight } from 'lucide-react'
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
 import { ScrollReveal } from '@/components/ScrollReveal'
