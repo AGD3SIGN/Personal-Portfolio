@@ -20,13 +20,13 @@ export default function About() {
           <ScrollReveal>
             <h1 className="mx-auto max-w-4xl text-balance text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-[88px]">
               <span className="font-light italic text-muted-foreground">About me, </span>
-              a Frontend Developer living in Munich
+              a Frontend Developer living in Saline County.
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
             <p className="mx-auto mt-8 max-w-2xl font-body text-base leading-relaxed text-muted-foreground">
-              As a Frontend Developer with over 10 years of experience, I specialize in creating intuitive and user-centered interfaces for a wide range of digital products and experiences.
+              With over 5+ years of experience, I find joy in creating intuitive and user-friendly websites and applications for a wide range of devices and platforms.
             </p>
           </ScrollReveal>
         </div>
@@ -38,7 +38,7 @@ export default function About() {
           <ScrollReveal>
             <div className="relative aspect-[3/2] overflow-hidden rounded-2xl">
               <img
-                src="/images/brandon.png"
+                src="/images/about.jpg"
                 alt="Portrait of Brandon Torres, a frontend developer"
                 className="absolute inset-0 h-full w-full object-cover"
               />
