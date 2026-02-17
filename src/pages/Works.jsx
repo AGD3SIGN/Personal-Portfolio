@@ -21,7 +21,7 @@ export default function Works() {
           <ScrollReveal>
             <h1 className="mx-auto max-w-4xl text-balance text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-[88px]">
               {"What I've been "}
-              <span className="font-light italic text-muted-foreground">working on</span>
+              <span className="font-light italic text-primary">working on</span>
               {' so far'}
             </h1>
           </ScrollReveal>
@@ -87,7 +87,7 @@ function ProjectCard({ project, wide = false }) {
             {project.category}
           </p>
         </div>
-        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
           <ArrowRight className="h-4 w-4" />
         </div>
       </div>

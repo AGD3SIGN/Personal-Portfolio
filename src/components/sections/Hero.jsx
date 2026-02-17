@@ -16,7 +16,7 @@ export function Hero() {
         <ScrollReveal>
           <h1 className="max-w-4xl text-balance text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-[88px]">
             {"I'm a frontend developer with passion to create "}
-            <span className="font-light italic text-muted-foreground">
+            <span className="font-light italic text-primary">
               {"great "}
               <RotatingText
                 texts={['experiences', 'interfaces', 'websites', 'layouts', 'designs']}
@@ -35,7 +35,7 @@ export function Hero() {
         </ScrollReveal>
 
         <ScrollReveal delay={100}>
-          <div className="my-8 h-px w-20 bg-border" />
+          <div className="my-8 h-px w-20 bg-primary" />
         </ScrollReveal>
 
         <ScrollReveal delay={150}>
@@ -51,7 +51,7 @@ export function Hero() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="flex items-center gap-1 text-xs font-medium uppercase tracking-wider text-foreground transition-colors hover:text-muted-foreground"
+                  className="flex items-center gap-1 text-xs font-medium uppercase tracking-wider text-foreground transition-colors hover:text-primary"
                 >
                   {link.label}
                   <ArrowUpRight className="h-3 w-3" />
@@ -62,7 +62,7 @@ export function Hero() {
             <div className="sm:ml-auto">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background transition-all hover:-translate-y-0.5 hover:shadow-lg"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-lg"
               >
                 {"Let's Talk"}
                 <ArrowRight className="h-4 w-4" />

@@ -43,7 +43,7 @@ export function FeaturedProjects() {
           <div className="mt-12 flex justify-center">
             <Link
               to="/works"
-              className="inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-muted-foreground"
+              className="inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-primary"
             >
               View All Works
               <ArrowRight className="h-4 w-4" />
@@ -80,7 +80,7 @@ function ProjectCard({ project, wide = false }) {
             {project.category}
           </p>
         </div>
-        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
           <ArrowRight className="h-4 w-4" />
         </div>
       </div>

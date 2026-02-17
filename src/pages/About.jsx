@@ -19,7 +19,7 @@ export default function About() {
         <div className="mx-auto max-w-[1400px] text-center">
           <ScrollReveal>
             <h1 className="mx-auto max-w-4xl text-balance text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-[88px]">
-              <span className="font-light italic text-muted-foreground">About me, </span>
+              <span className="font-light italic text-primary">About me, </span>
               a Frontend Developer living in Saline County.
             </h1>
           </ScrollReveal>
@@ -115,7 +115,7 @@ export default function About() {
                     <span className="text-lg font-semibold italic tracking-tight text-muted-foreground">
                       {client.name}
                     </span>
-                    <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
+                    <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 transition-all group-hover:opacity-100 group-hover:text-primary" />
                   </div>
                 </div>
               </ScrollReveal>
@@ -145,7 +145,7 @@ export default function About() {
                 <p className="mt-3 font-body text-sm text-muted-foreground">
                   Brandon Torres - 2022
                 </p>
-                <button className="mt-6 flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-foreground hover:text-background">
+                <button className="mt-6 flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-primary hover:text-primary-foreground">
                   <ArrowUpRight className="h-4 w-4" />
                 </button>
 
@@ -163,7 +163,7 @@ export default function About() {
                           {award.year} - {award.org}
                         </p>
                       </div>
-                      <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
+                      <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground opacity-0 transition-all group-hover:opacity-100 group-hover:text-primary" />
                     </div>
                   ))}
                 </div>

@@ -76,7 +76,7 @@ export default function CaseStudy() {
                     </div>
                     <a
                       href={project.website}
-                      className="inline-flex w-fit items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground hover:text-background"
+                      className="inline-flex w-fit items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
                     >
                       Visit Website
                       <ArrowUpRight className="h-3.5 w-3.5" />
@@ -212,7 +212,7 @@ export default function CaseStudy() {
               </h2>
               <Link
                 to="/works"
-                className="flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-muted-foreground"
+                className="flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-primary"
               >
                 View All Works
                 <ArrowRight className="h-4 w-4" />
@@ -238,7 +238,7 @@ export default function CaseStudy() {
                       <h3 className="text-lg font-semibold text-foreground">{p.title}</h3>
                       <p className="font-body text-sm text-muted-foreground">{p.category}</p>
                     </div>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                       <ArrowRight className="h-4 w-4" />
                     </div>
                   </div>

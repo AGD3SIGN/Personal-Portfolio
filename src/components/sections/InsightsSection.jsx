@@ -13,7 +13,7 @@ export function InsightsSection() {
             </h2>
             <a
               href="#"
-              className="hidden items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-muted-foreground sm:flex"
+              className="hidden items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-primary sm:flex"
             >
               View All Insights
               <ArrowRight className="h-4 w-4" />
@@ -36,7 +36,7 @@ export function InsightsSection() {
                     />
                   </div>
                   <div className="flex flex-col justify-center">
-                    <h3 className="text-base font-semibold leading-snug text-foreground transition-colors group-hover:text-muted-foreground md:text-lg">
+                    <h3 className="text-base font-semibold leading-snug text-foreground transition-colors group-hover:text-primary md:text-lg">
                       {post.title}
                     </h3>
                     <p className="mt-2 font-body text-xs text-muted-foreground">

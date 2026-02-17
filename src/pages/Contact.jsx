@@ -57,7 +57,7 @@ export default function Contact() {
         <div className="mx-auto max-w-[1400px]">
           <ScrollReveal>
             <h1 className="mx-auto max-w-4xl text-balance text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-[88px]">
-              <span className="font-light italic text-muted-foreground">Say Hi! </span>
+              <span className="font-light italic text-primary">Say Hi! </span>
               and tell me about your idea
             </h1>
           </ScrollReveal>
@@ -82,7 +82,7 @@ export default function Contact() {
                   placeholder="Hello..."
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="mt-3 w-full border-b border-border bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:border-foreground focus:outline-none"
+                  className="mt-3 w-full border-b border-border bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:outline-none"
                 />
               </div>
             </ScrollReveal>
@@ -95,7 +95,7 @@ export default function Contact() {
                   placeholder="Where can I reply?"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="mt-3 w-full border-b border-border bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:border-foreground focus:outline-none"
+                  className="mt-3 w-full border-b border-border bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:outline-none"
                 />
               </div>
             </ScrollReveal>
@@ -108,7 +108,7 @@ export default function Contact() {
                   placeholder="Your company or website?"
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                  className="mt-3 w-full border-b border-border bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:border-foreground focus:outline-none"
+                  className="mt-3 w-full border-b border-border bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:outline-none"
                 />
               </div>
             </ScrollReveal>
@@ -126,8 +126,8 @@ export default function Contact() {
                       onClick={() => toggleService(service)}
                       className={`rounded-full border px-5 py-2.5 font-body text-sm transition-all ${
                         selectedServices.includes(service)
-                          ? 'border-foreground bg-foreground text-background'
-                          : 'border-border text-foreground hover:border-foreground'
+                          ? 'border-primary bg-primary text-primary-foreground'
+                          : 'border-border text-foreground hover:border-primary'
                       }`}
                     >
                       {service}
@@ -150,8 +150,8 @@ export default function Contact() {
                       onClick={() => setSelectedBudget(range)}
                       className={`rounded-full border px-5 py-2.5 font-body text-sm transition-all ${
                         selectedBudget === range
-                          ? 'border-foreground bg-foreground text-background'
-                          : 'border-border text-foreground hover:border-foreground'
+                          ? 'border-primary bg-primary text-primary-foreground'
+                          : 'border-border text-foreground hover:border-primary'
                       }`}
                     >
                       {range}
@@ -169,7 +169,7 @@ export default function Contact() {
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="mt-3 w-full resize-y border-b border-border bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:border-foreground focus:outline-none"
+                  className="mt-3 w-full resize-y border-b border-border bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:outline-none"
                 />
               </div>
             </ScrollReveal>
@@ -178,7 +178,7 @@ export default function Contact() {
               <div className="flex justify-center pt-6">
                 <button
                   type="submit"
-                  className="rounded-full bg-foreground px-12 py-4 text-base font-medium text-background transition-all hover:-translate-y-0.5 hover:shadow-lg"
+                  className="rounded-full bg-primary px-12 py-4 text-base font-medium text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-lg"
                 >
                   Submit
                 </button>

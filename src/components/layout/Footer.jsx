@@ -17,30 +17,30 @@ const socialIcons = [
 export function Footer() {
   return (
     <footer>
-      <section className="bg-dark-bg px-6 pb-16 pt-20 text-center lg:px-10">
+      <section className="bg-secondary px-6 pb-16 pt-20 text-center lg:px-10">
         <div className="mx-auto max-w-[1400px]">
           <div className="mb-8 flex flex-wrap items-center justify-center gap-4">
             {footerNav.map((link) => (
               <Link
                 key={link.label}
                 to={link.href}
-                className="text-xs font-medium uppercase tracking-widest text-white/50 transition-colors hover:text-white"
+                className="text-xs font-medium uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.label}
               </Link>
             ))}
           </div>
 
-          <h2 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
+          <h2 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-foreground md:text-6xl lg:text-7xl">
             {'Want to create something '}
-            <span className="font-light italic text-white/30">
+            <span className="font-light italic text-primary/70">
               {'awesome?'}
             </span>
           </h2>
 
           <Link
             to="/contact"
-            className="mt-10 inline-flex items-center gap-2 rounded-full bg-foreground px-8 py-4 text-sm font-medium text-background transition-all hover:-translate-y-0.5 hover:shadow-lg"
+            className="mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-lg"
           >
             {"Let's Talk"}
             <ArrowUpRight className="h-4 w-4" />
@@ -48,7 +48,7 @@ export function Footer() {
         </div>
       </section>
 
-      <section className="bg-dark-bg px-6 pb-10 pt-12 lg:px-10">
+      <section className="bg-secondary px-6 pb-10 pt-12 lg:px-10">
         <div className="mx-auto max-w-[1400px]">
           {/* <div className="mb-12 flex flex-col gap-8 border-t border-white/10 pt-12 md:flex-row md:items-center md:justify-between">
             <p className="text-sm text-white/50">Stay connected w/ me.</p>
@@ -68,12 +68,12 @@ export function Footer() {
             <div>
               <Link
                 to="/"
-                className="mb-3 block text-2xl font-bold tracking-tight text-white"
+                className="mb-3 block text-2xl font-bold tracking-tight text-foreground"
               >
-                <span className="font-light italic text-white/50">show</span>
+                <span className="font-light italic text-muted-foreground">show</span>
                 <span className="font-bold">casy.</span>
               </Link>
-              <p className="max-w-sm text-sm leading-relaxed text-white/40">
+              <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
                 A freelance frontend developer currently based in Berlin
               </p>
             </div>
@@ -84,7 +84,7 @@ export function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white/60 transition-colors hover:bg-white/20 hover:text-white"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:bg-muted/80 hover:text-foreground"
                 >
                   <SocialIcon name={social.icon} />
                 </a>
@@ -92,8 +92,8 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-12 border-t border-white/10 pt-6">
-            <p className="text-xs text-white/30">
+          <div className="mt-12 border-t border-border pt-6">
+            <p className="text-xs text-muted-foreground">
               &copy; 2026. All rights reserved.
             </p>
           </div>

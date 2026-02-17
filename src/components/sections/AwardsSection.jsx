@@ -37,7 +37,7 @@ export function AwardsSection() {
                       {award.year} - {award.org}
                     </p>
                   </div>
-                  <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
+                  <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 transition-all group-hover:opacity-100 group-hover:text-primary" />
                 </div>
               </ScrollReveal>
             ))}
