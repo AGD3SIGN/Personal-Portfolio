@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { Navigation } from '@/components/Navigation'
-import { Footer } from '@/components/Footer'
-import { ScrollReveal } from '@/components/ScrollReveal'
+import { Navigation } from '@/components/layout/Navigation'
+import { Footer } from '@/components/layout/Footer'
+import { ScrollReveal } from '@/components/layout/ScrollReveal'
 
 const services = [
   'Mobile App',

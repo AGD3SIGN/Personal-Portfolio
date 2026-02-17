@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react'
-import { ScrollReveal } from '@/components/ScrollReveal'
+import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { blogPosts } from '@/lib/data'
 
 export function InsightsSection() {
@@ -32,6 +32,7 @@ export function InsightsSection() {
                       alt={post.title}
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                       loading="lazy"
+                      onError={(e) => { e.target.src = '/images/placeholder.svg' }}
                     />
                   </div>
                   <div className="flex flex-col justify-center">

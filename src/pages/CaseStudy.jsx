@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
-import { Navigation } from '@/components/Navigation'
-import { Footer } from '@/components/Footer'
-import { ScrollReveal } from '@/components/ScrollReveal'
+import { Navigation } from '@/components/layout/Navigation'
+import { Footer } from '@/components/layout/Footer'
+import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { projects } from '@/lib/data'
 
 export default function CaseStudy() {
@@ -42,6 +42,7 @@ export default function CaseStudy() {
                 src={project.image}
                 alt={`${project.title} hero image`}
                 className="absolute inset-0 h-full w-full object-cover"
+                onError={(e) => { e.target.src = '/images/placeholder.svg' }}
               />
             </div>
           </ScrollReveal>
@@ -140,6 +141,7 @@ export default function CaseStudy() {
                       alt="Project screenshot 1"
                       className="absolute inset-0 h-full w-full object-cover"
                       loading="lazy"
+                      onError={(e) => { e.target.src = '/images/placeholder.svg' }}
                     />
                   </div>
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-secondary">
@@ -148,6 +150,7 @@ export default function CaseStudy() {
                       alt="Project screenshot 2"
                       className="absolute inset-0 h-full w-full object-cover"
                       loading="lazy"
+                      onError={(e) => { e.target.src = '/images/placeholder.svg' }}
                     />
                   </div>
                 </div>
@@ -161,6 +164,7 @@ export default function CaseStudy() {
                     alt="Project full view"
                     className="absolute inset-0 h-full w-full object-cover"
                     loading="lazy"
+                    onError={(e) => { e.target.src = '/images/placeholder.svg' }}
                   />
                 </div>
               </ScrollReveal>
@@ -226,6 +230,7 @@ export default function CaseStudy() {
                       alt={`${p.title} project mockup`}
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
+                      onError={(e) => { e.target.src = '/images/placeholder.svg' }}
                     />
                   </div>
                   <div className="mt-4 flex items-center justify-between">

@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import { Navigation } from '@/components/Navigation'
-import { Footer } from '@/components/Footer'
-import { ScrollReveal } from '@/components/ScrollReveal'
+import { Navigation } from '@/components/layout/Navigation'
+import { Footer } from '@/components/layout/Footer'
+import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { projects } from '@/lib/data'
 
 export default function Works() {
@@ -75,6 +75,7 @@ function ProjectCard({ project, wide = false }) {
           alt={`${project.title} project mockup`}
           className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
+          onError={(e) => { e.target.src = '/images/placeholder.svg' }}
         />
       </div>
       <div className="mt-4 flex items-center justify-between">

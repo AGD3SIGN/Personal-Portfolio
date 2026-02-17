@@ -1,4 +1,4 @@
-import { ScrollReveal } from '@/components/ScrollReveal'
+import { ScrollReveal } from '@/components/layout/ScrollReveal'
 
 const clientBrands = [
   { name: 'pipefy', display: 'pipefy', service: 'UI/UX & Branding', year: '2022' },

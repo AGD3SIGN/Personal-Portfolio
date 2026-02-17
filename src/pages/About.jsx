@@ -1,10 +1,9 @@
 import { useEffect } from 'react'
 import { ArrowUpRight } from 'lucide-react'
-import { Navigation } from '@/components/Navigation'
-import { Footer } from '@/components/Footer'
-import { ScrollReveal } from '@/components/ScrollReveal'
+import { Navigation } from '@/components/layout/Navigation'
+import { Footer } from '@/components/layout/Footer'
+import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { experience, clients, awards } from '@/lib/data'
-import brandonImg from '@/images/brandon.png'
 
 export default function About() {
   useEffect(() => {
@@ -39,7 +38,7 @@ export default function About() {
           <ScrollReveal>
             <div className="relative aspect-[3/2] overflow-hidden rounded-2xl">
               <img
-                src={brandonImg}
+                src="/images/brandon.png"
                 alt="Portrait of Brandon Torres, a frontend developer"
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -136,6 +135,7 @@ export default function About() {
                   alt="Design award trophy"
                   className="absolute inset-0 h-full w-full object-cover"
                   loading="lazy"
+                  onError={(e) => { e.target.src = '/images/placeholder.svg' }}
                 />
               </div>
               <div>

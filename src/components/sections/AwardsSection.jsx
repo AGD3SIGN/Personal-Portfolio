@@ -1,5 +1,5 @@
 import { ArrowUpRight } from 'lucide-react'
-import { ScrollReveal } from '@/components/ScrollReveal'
+import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { awards } from '@/lib/data'
 
 export function AwardsSection() {
@@ -14,6 +14,7 @@ export function AwardsSection() {
                 alt="Design award trophy"
                 className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
+                onError={(e) => { e.target.src = '/images/placeholder.svg' }}
               />
             </div>
             <h2 className="mt-6 text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">

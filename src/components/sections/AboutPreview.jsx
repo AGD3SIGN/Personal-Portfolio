@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import { ScrollReveal } from '@/components/ScrollReveal'
-import brandonImg from '@/images/brandon.png'
+import { ScrollReveal } from '@/components/layout/ScrollReveal'
 
 export function AboutPreview() {
   return (
@@ -11,7 +10,7 @@ export function AboutPreview() {
           <ScrollReveal className="md:w-2/5">
             <div className="relative aspect-[3/4] max-w-sm overflow-hidden rounded-2xl">
               <img
-                src={brandonImg}
+                src="/images/brandon.png"
                 alt="Portrait of Brandon Torres, a frontend developer"
                 className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"

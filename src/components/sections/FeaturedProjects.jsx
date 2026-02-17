@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import { ScrollReveal } from '@/components/ScrollReveal'
+import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { projects } from '@/lib/data'
 
 export function FeaturedProjects() {
@@ -68,6 +68,7 @@ function ProjectCard({ project, wide = false }) {
           alt={`${project.title} project mockup`}
           className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
+          onError={(e) => { e.target.src = '/images/placeholder.svg' }}
         />
       </div>
       <div className="mt-4 flex items-center justify-between">

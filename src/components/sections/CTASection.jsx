@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
-import { ScrollReveal } from '@/components/ScrollReveal'
+import { ScrollReveal } from '@/components/layout/ScrollReveal'
 
 export function CTASection() {
   return (
