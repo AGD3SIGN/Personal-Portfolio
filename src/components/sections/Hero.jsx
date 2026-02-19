@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
 
+// TODO: Add your real social links here
 const socialLinks = [
-  { label: 'INSTAGRAM', href: '#' },
-  { label: 'BEHANCE', href: '#' },
-  { label: 'DRIBBBLE', href: '#' },
+  // { label: 'INSTAGRAM', href: 'https://instagram.com/yourusername' },
+  // { label: 'BEHANCE', href: 'https://behance.net/yourusername' },
+  // { label: 'DRIBBBLE', href: 'https://dribbble.com/yourusername' },
 ]
 
 export function Hero() {

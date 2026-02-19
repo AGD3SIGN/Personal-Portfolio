@@ -7,11 +7,12 @@ const footerNav = [
   { label: 'CONTACT', href: '/contact' },
 ]
 
+// TODO: Add your real social links here
 const socialIcons = [
-  { label: 'Twitter', href: '#', icon: 'twitter' },
-  { label: 'YouTube', href: '#', icon: 'youtube' },
-  { label: 'TikTok', href: '#', icon: 'tiktok' },
-  { label: 'Instagram', href: '#', icon: 'instagram' },
+  // { label: 'Twitter', href: 'https://twitter.com/yourusername', icon: 'twitter' },
+  // { label: 'YouTube', href: 'https://youtube.com/@yourusername', icon: 'youtube' },
+  // { label: 'TikTok', href: 'https://tiktok.com/@yourusername', icon: 'tiktok' },
+  // { label: 'Instagram', href: 'https://instagram.com/yourusername', icon: 'instagram' },
 ]
 
 export function Footer() {

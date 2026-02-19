@@ -1,9 +1,8 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
+import { ProjectCard } from '@/components/shared/ProjectCard'
 import { projects } from '@/lib/data'
 
 export default function Works() {
@@ -33,64 +32,23 @@ export default function Works() {
         <div className="mx-auto max-w-[1400px]">
           <div className="flex flex-col gap-8">
             <div className="grid gap-8 md:grid-cols-2">
-              <ScrollReveal>
-                <ProjectCard project={projects[0]} />
-              </ScrollReveal>
-              <ScrollReveal delay={100}>
-                <ProjectCard project={projects[1]} />
-              </ScrollReveal>
+              {projects.slice(0, 2).map((project, i) => (
+                <ScrollReveal key={project.slug} delay={i * 100}>
+                  <ProjectCard project={project} />
+                </ScrollReveal>
+              ))}
             </div>
 
-            <ScrollReveal>
-              <ProjectCard project={projects[0]} wide />
-            </ScrollReveal>
-
-            <div className="grid gap-8 md:grid-cols-2">
+            {projects[2] && (
               <ScrollReveal>
-                <ProjectCard project={projects[0]} />
+                <ProjectCard project={projects[2]} wide />
               </ScrollReveal>
-              <ScrollReveal delay={100}>
-                <ProjectCard project={projects[1]} />
-              </ScrollReveal>
-            </div>
+            )}
           </div>
         </div>
       </section>
 
       <Footer />
     </main>
-  )
-}
-
-function ProjectCard({ project, wide = false }) {
-  return (
-    <Link to={`/works/${project.slug}`} className="group block">
-      <div
-        className={`overflow-hidden rounded-2xl bg-secondary transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl ${
-          wide ? 'aspect-[2/1]' : 'aspect-[4/3]'
-        } relative`}
-      >
-        <img
-          src={project.image}
-          alt={`${project.title} project mockup`}
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          loading="lazy"
-          onError={(e) => { e.target.src = '/images/placeholder.svg' }}
-        />
-      </div>
-      <div className="mt-4 flex items-center justify-between">
-        <div>
-          <h3 className="text-lg font-semibold text-foreground">
-            {project.title}
-          </h3>
-          <p className="font-body text-sm text-muted-foreground">
-            {project.category}
-          </p>
-        </div>
-        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-          <ArrowRight className="h-4 w-4" />
-        </div>
-      </div>
-    </Link>
   )
 }

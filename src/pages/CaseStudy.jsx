@@ -41,6 +41,8 @@ export default function CaseStudy() {
               <img
                 src={project.image}
                 alt={`${project.title} hero image`}
+                width={1200}
+                height={675}
                 className="absolute inset-0 h-full w-full object-cover"
                 onError={(e) => { e.target.src = '/images/placeholder.svg' }}
               />
@@ -139,6 +141,8 @@ export default function CaseStudy() {
                     <img
                       src="/images/project-wepay-phone.jpg"
                       alt="Project screenshot 1"
+                      width={700}
+                      height={525}
                       className="absolute inset-0 h-full w-full object-cover"
                       loading="lazy"
                       onError={(e) => { e.target.src = '/images/placeholder.svg' }}
@@ -148,6 +152,8 @@ export default function CaseStudy() {
                     <img
                       src="/images/project-payrole-phone.jpg"
                       alt="Project screenshot 2"
+                      width={700}
+                      height={525}
                       className="absolute inset-0 h-full w-full object-cover"
                       loading="lazy"
                       onError={(e) => { e.target.src = '/images/placeholder.svg' }}
@@ -162,6 +168,8 @@ export default function CaseStudy() {
                   <img
                     src="/images/project-estatery-laptop-2.jpg"
                     alt="Project full view"
+                    width={1400}
+                    height={700}
                     className="absolute inset-0 h-full w-full object-cover"
                     loading="lazy"
                     onError={(e) => { e.target.src = '/images/placeholder.svg' }}
