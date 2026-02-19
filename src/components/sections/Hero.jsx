@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
-import RotatingText from '@/components/ui/RotatingText'
 
 const socialLinks = [
   { label: 'INSTAGRAM', href: '#' },
@@ -17,19 +16,7 @@ export function Hero() {
           <h1 className="max-w-4xl text-balance text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-[88px]">
             {"I'm a frontend developer with passion to create "}
             <span className="font-light italic text-primary">
-              {"great "}
-              <RotatingText
-                texts={['experiences', 'interfaces', 'websites', 'layouts', 'designs']}
-                mainClassName="inline-flex overflow-clip py-1 justify-center rounded-lg bg-muted-foreground/10 px-4"
-                staggerFrom="last"
-                initial={{ y: '100%' }}
-                animate={{ y: 0 }}
-                exit={{ y: '-120%' }}
-                staggerDuration={0.025}
-                splitLevelClassName="overflow-hidden pb-1"
-                transition={{ type: 'spring', damping: 30, stiffness: 400 }}
-                rotationInterval={2500}
-              />
+              great experiences
             </span>
           </h1>
         </ScrollReveal>
