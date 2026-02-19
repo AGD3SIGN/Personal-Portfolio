@@ -43,9 +43,24 @@ export default function Contact() {
     )
   }
 
+  const [errors, setErrors] = useState({})
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log({ ...formData, services: selectedServices, budget: selectedBudget })
+    const newErrors = {}
+    if (!formData.name.trim()) newErrors.name = 'Name is required'
+    if (!formData.email.trim()) newErrors.email = 'Email is required'
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
+      newErrors.email = 'Please enter a valid email'
+    if (!formData.message.trim()) newErrors.message = 'Message is required'
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors)
+      return
+    }
+
+    setErrors({})
+    // TODO: Replace with actual form submission (e.g. EmailJS, Formspree, or API endpoint)
   }
 
   return (
@@ -82,8 +97,9 @@ export default function Contact() {
                   placeholder="Hello..."
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="mt-3 w-full border-b border-border bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:outline-none"
+                  className={`mt-3 w-full border-b bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:outline-none ${errors.name ? 'border-red-500' : 'border-border focus:border-primary'}`}
                 />
+                {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
               </div>
             </ScrollReveal>
 
@@ -95,8 +111,9 @@ export default function Contact() {
                   placeholder="Where can I reply?"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="mt-3 w-full border-b border-border bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:outline-none"
+                  className={`mt-3 w-full border-b bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:outline-none ${errors.email ? 'border-red-500' : 'border-border focus:border-primary'}`}
                 />
+                {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
               </div>
             </ScrollReveal>
 
@@ -169,8 +186,9 @@ export default function Contact() {
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="mt-3 w-full resize-y border-b border-border bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:outline-none"
+                  className={`mt-3 w-full resize-y border-b bg-transparent pb-3 font-body text-base text-foreground placeholder:text-muted-foreground/50 focus:outline-none ${errors.message ? 'border-red-500' : 'border-border focus:border-primary'}`}
                 />
+                {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
               </div>
             </ScrollReveal>
 

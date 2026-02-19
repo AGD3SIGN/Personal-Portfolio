@@ -35,10 +35,17 @@ export function Navigation() {
     } else {
       document.body.style.overflow = ''
     }
+  }, [isOpen])
+
+  useEffect(() => {
+    setIsOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
     return () => {
       document.body.style.overflow = ''
     }
-  }, [isOpen])
+  }, [])
 
   return (
     <>
