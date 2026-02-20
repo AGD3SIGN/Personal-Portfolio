@@ -14,10 +14,22 @@ export function ProjectCard({ project, wide = false }) {
           alt={`${project.title} — ${project.category} project`}
           width={wide ? 1400 : 700}
           height={wide ? 700 : 525}
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-[0.6]"
           loading="lazy"
           onError={(e) => { e.target.src = '/images/placeholder.svg' }}
         />
+
+        <div className="absolute inset-x-0 bottom-0 flex translate-y-4 flex-col justify-end p-6 opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+          <p className="text-xs font-medium uppercase tracking-wider text-primary">
+            {project.category}
+          </p>
+          <p className="mt-1 text-lg font-bold text-white">
+            {project.title}
+          </p>
+          <p className="mt-2 flex items-center gap-1.5 text-xs font-medium text-white/80">
+            View Project <ArrowRight className="h-3 w-3" />
+          </p>
+        </div>
       </div>
       <div className="mt-4 flex items-center justify-between">
         <div>

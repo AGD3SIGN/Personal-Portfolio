@@ -85,6 +85,80 @@ export const projects = [
   },
 ]
 
+export const skills = [
+  { name: 'React', icon: '\u269B\uFE0F', proficiency: 92, description: 'Building complex SPAs with hooks, context, and modern patterns.' },
+  { name: 'JavaScript', icon: '\uD83D\uDFE8', proficiency: 90, description: 'ES6+, async patterns, DOM manipulation, and functional programming.' },
+  { name: 'TypeScript', icon: '\uD83D\uDD37', proficiency: 78, description: 'Type-safe codebases with generics, utility types, and strict mode.' },
+  { name: 'HTML/CSS', icon: '\uD83C\uDFA8', proficiency: 95, description: 'Semantic markup, responsive design, animations, and accessibility.' },
+  { name: 'Tailwind CSS', icon: '\uD83D\uDCA8', proficiency: 93, description: 'Utility-first styling with custom themes and component patterns.' },
+  { name: 'GSAP', icon: '\u2728', proficiency: 75, description: 'Timeline-based animations, scroll triggers, and complex sequences.' },
+  { name: 'Figma', icon: '\uD83D\uDD8C\uFE0F', proficiency: 85, description: 'Design systems, prototyping, auto-layout, and dev handoff.' },
+  { name: 'Git', icon: '\uD83D\uDD00', proficiency: 88, description: 'Version control, branching strategies, and collaborative workflows.' },
+]
+
+export const approachSteps = [
+  {
+    number: '01',
+    title: 'Introduction & Discovery',
+    description: 'Every great project starts with a conversation. I take the time to understand your vision, business goals, target audience, and project constraints before anything else.',
+    details: [
+      'Free initial consultation to discuss your project and goals',
+      'Detailed project brief with scope, timeline, and deliverables for your sign-off',
+      'Clear and transparent pricing with no hidden costs',
+    ],
+  },
+  {
+    number: '02',
+    title: 'Research & Strategy',
+    description: 'I dig into your industry, analyze competitors, and map out a technical strategy that positions your product for success.',
+    details: [
+      'Competitor audit and market landscape analysis',
+      'User persona and journey mapping to guide design decisions',
+      'Technology recommendations tailored to your budget and scale',
+    ],
+  },
+  {
+    number: '03',
+    title: 'Design & Prototyping',
+    description: 'From wireframes to pixel-perfect mockups, I design with intention. You see and approve every screen before a single line of code is written.',
+    details: [
+      'Wireframes and interactive prototypes you can click through',
+      'Up to two rounds of design revisions included at every stage',
+      'Design system with reusable components for long-term consistency',
+    ],
+  },
+  {
+    number: '04',
+    title: 'Development',
+    description: 'Clean, performant code built with modern frameworks. I develop responsively and keep you in the loop with regular progress demos.',
+    details: [
+      'Weekly progress updates with live preview links',
+      'Responsive builds tested across devices and browsers',
+      'Version-controlled code you fully own from day one',
+    ],
+  },
+  {
+    number: '05',
+    title: 'Testing & QA',
+    description: 'Before anything goes live, I run thorough testing to make sure everything works flawlessly for every user on every device.',
+    details: [
+      'Cross-browser and cross-device compatibility testing',
+      'Performance optimization for fast load times',
+      'Accessibility review to meet WCAG standards',
+    ],
+  },
+  {
+    number: '06',
+    title: 'Deployment & Maintenance',
+    description: 'Launch day is just the beginning. I handle deployment and offer ongoing support to keep your product running smoothly.',
+    details: [
+      'Managed deployment to your hosting platform of choice',
+      '30 days of post-launch bug fixes included at no extra cost',
+      'Optional maintenance plans for updates and new features',
+    ],
+  },
+]
+
 export const clients = [
   { name: 'pipefy', label: 'Pipefy.io', date: 'May 5, 2023' },
   { name: 'django', label: 'Django', date: 'May 5, 2023' },

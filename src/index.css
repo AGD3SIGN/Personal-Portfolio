@@ -36,6 +36,40 @@
     --dark-border: 225 8% 19%;
     --dark-text: 0 0% 100%;
     --dark-text-muted: 220 5% 64%;
+
+    --scrollbar-track: 225 12% 8%;
+    --scrollbar-thumb: 225 8% 24%;
+  }
+
+  .light {
+    --background: 0 0% 97%;
+    --foreground: 225 15% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 225 15% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 15% 12%;
+    --primary: 59 93% 45%;
+    --primary-foreground: 225 15% 8%;
+    --secondary: 220 10% 92%;
+    --secondary-foreground: 225 15% 12%;
+    --muted: 220 10% 90%;
+    --muted-foreground: 220 5% 42%;
+    --accent: 220 10% 92%;
+    --accent-foreground: 225 15% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 10% 85%;
+    --input: 220 10% 85%;
+    --ring: 59 93% 45%;
+
+    --dark-bg: 0 0% 95%;
+    --dark-card: 0 0% 100%;
+    --dark-border: 220 10% 85%;
+    --dark-text: 225 15% 12%;
+    --dark-text-muted: 220 5% 42%;
+
+    --scrollbar-track: 0 0% 97%;
+    --scrollbar-thumb: 220 10% 78%;
   }
 }
 
@@ -49,18 +83,16 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  transition: color 300ms ease, background-color 300ms ease;
 }
 
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(225 12% 8%);
+  background: hsl(var(--scrollbar-track));
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(225 8% 24%);
+  background: hsl(var(--scrollbar-thumb));
   border-radius: 3px;
 }
-
-

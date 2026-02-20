@@ -11,8 +11,8 @@ const socialLinks = [
 
 export function Hero() {
   return (
-    <section className="relative px-6 pb-16 pt-32 lg:px-10 lg:pt-40">
-      <div className="mx-auto max-w-[1400px]">
+    <section className="relative flex min-h-svh flex-col justify-center px-6 lg:px-10">
+      <div className="mx-auto w-full max-w-[1400px]">
         <ScrollReveal>
           <h1 className="max-w-4xl text-balance text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-[88px]">
             {"I'm a frontend developer with passion to create "}

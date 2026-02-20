@@ -3,6 +3,8 @@ import { ArrowUpRight } from 'lucide-react'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
+import { ApproachSection } from '@/components/sections/ApproachSection'
+import { SkillsSection } from '@/components/sections/SkillsSection'
 import { experience, clients, awards } from '@/lib/data'
 
 export default function About() {
@@ -68,6 +70,10 @@ export default function About() {
           </ScrollReveal>
         </div>
       </section>
+
+      <ApproachSection />
+
+      <SkillsSection />
 
       {/* Experience */}
       <section className="px-6 pb-20 lg:px-10 lg:pb-28">

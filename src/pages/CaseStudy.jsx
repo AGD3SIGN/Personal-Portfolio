@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
+import { AnimatedMetric } from '@/components/shared/AnimatedMetric'
 import { projects } from '@/lib/data'
 
 export default function CaseStudy() {
@@ -122,14 +123,7 @@ export default function CaseStudy() {
               <ScrollReveal>
                 <div className="mt-10 grid grid-cols-3 gap-6">
                   {project.metrics.map((metric, i) => (
-                    <div key={i}>
-                      <p className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-                        {metric.value}
-                      </p>
-                      <p className="mt-1 font-body text-xs text-muted-foreground">
-                        {metric.label}
-                      </p>
-                    </div>
+                    <AnimatedMetric key={i} value={metric.value} label={metric.label} />
                   ))}
                 </div>
               </ScrollReveal>
