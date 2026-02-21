@@ -42,15 +42,15 @@ export function AboutPreview() {
               <div className="flex flex-col justify-between gap-6 rounded-xl bg-muted p-7 md:w-1/2 lg:w-auto">
                 <div>
                   <p className="mb-2 text-lg font-semibold text-foreground">
-                    Design that sparks engagement
+                    My Approach
                   </p>
                   <p className="font-body text-sm text-muted-foreground">
-                    I create intuitive, user-friendly interfaces that turn visitors into customers and ideas into experiences.
+                    A transparent 6-step process from discovery to deployment — so you always know what to expect, what comes next, and where your investment is going.
                   </p>
                 </div>
                 <Button variant="outline" className="mr-auto" asChild>
-                  <Link to="/about">
-                    Learn More
+                  <Link to="/about#approach">
+                    See My Process
                     <ArrowRight className="ml-2 h-3.5 w-3.5" />
                   </Link>
                 </Button>
