@@ -5,10 +5,10 @@ import { approachSteps } from '@/lib/data'
 
 export function ApproachPreview() {
   return (
-    <section className="px-6 py-20 lg:px-10 lg:py-28">
+    <section className="px-6 py-28 lg:px-10 lg:py-36">
       <div className="mx-auto max-w-[1400px]">
         <ScrollReveal>
-          <div className="mb-12 flex items-center justify-between">
+          <div className="mb-14 flex items-center justify-between">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
                 My Approach

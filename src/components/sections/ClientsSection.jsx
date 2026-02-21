@@ -9,7 +9,7 @@ const clientBrands = [
 
 export function ClientsSection() {
   return (
-    <section className="px-6 py-20 lg:px-10 lg:py-28">
+    <section className="px-6 py-28 lg:px-10 lg:py-36">
       <div className="mx-auto max-w-[1400px]">
         <ScrollReveal>
           <h2 className="max-w-2xl text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl">
@@ -17,7 +17,7 @@ export function ClientsSection() {
           </h2>
         </ScrollReveal>
 
-        <div className="mt-14 grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
           {clientBrands.map((client, i) => (
             <ScrollReveal key={client.name} delay={i * 100}>
               <div className="group">

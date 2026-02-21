@@ -4,7 +4,7 @@ import { awards } from '@/lib/data'
 
 export function AwardsSection() {
   return (
-    <section className="px-6 py-20 lg:px-10 lg:py-28">
+    <section className="px-6 py-28 lg:px-10 lg:py-36">
       <div className="mx-auto max-w-[1400px]">
         <div className="flex flex-col gap-10 lg:flex-row lg:gap-16">
           <ScrollReveal className="lg:w-2/5">

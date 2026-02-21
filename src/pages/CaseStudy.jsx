@@ -53,7 +53,7 @@ export default function CaseStudy() {
       </section>
 
       {/* Content with sticky sidebar */}
-      <section className="px-6 py-16 lg:px-10 lg:py-24">
+      <section className="px-6 py-24 lg:px-10 lg:py-32">
         <div className="mx-auto max-w-[1400px]">
           <div className="flex flex-col gap-12 lg:flex-row lg:gap-20">
             {/* Sidebar */}
@@ -205,7 +205,7 @@ export default function CaseStudy() {
       </section>
 
       {/* What's Next */}
-      <section className="px-6 py-20 lg:px-10 lg:py-28">
+      <section className="px-6 py-28 lg:px-10 lg:py-36">
         <div className="mx-auto max-w-[1400px]">
           <ScrollReveal>
             <div className="mb-12 flex items-center justify-between">

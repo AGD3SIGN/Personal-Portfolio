@@ -8,10 +8,10 @@ export function FeaturedProjects() {
   const featured = projects.filter((p) => p.featured)
 
   return (
-    <section className="px-6 py-20 lg:px-10 lg:py-28">
+    <section className="px-6 py-28 lg:px-10 lg:py-36">
       <div className="mx-auto max-w-[1400px]">
         <ScrollReveal>
-          <h2 className="mb-12 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
+          <h2 className="mb-14 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
             Discover my latest works
           </h2>
         </ScrollReveal>

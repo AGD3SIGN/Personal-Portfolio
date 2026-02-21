@@ -94,7 +94,7 @@ export function ApproachSection() {
   })
 
   return (
-    <section id="approach" className="px-6 py-20 lg:px-10 lg:py-28">
+    <section id="approach" className="px-6 py-28 lg:px-10 lg:py-36">
       <div className="mx-auto max-w-[900px]">
         <ScrollReveal>
           <h2 className="text-center text-3xl font-bold tracking-tight text-foreground md:text-4xl">

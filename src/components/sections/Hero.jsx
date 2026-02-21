@@ -1,61 +1,65 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, ArrowUpRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
-
-// TODO: Add your real social links here
-const socialLinks = [
-  // { label: 'INSTAGRAM', href: 'https://instagram.com/yourusername' },
-  // { label: 'BEHANCE', href: 'https://behance.net/yourusername' },
-  // { label: 'DRIBBBLE', href: 'https://dribbble.com/yourusername' },
-]
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-svh flex-col justify-center px-6 lg:px-10">
-      <div className="mx-auto w-full max-w-[1400px]">
+    <section className="relative px-6 pb-28 lg:px-10 lg:pb-36">
+      <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center pt-36 lg:pt-44">
+        {/* Pulsing availability badge */}
         <ScrollReveal>
-          <h1 className="max-w-4xl text-balance text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-[88px]">
-            {"I'm a frontend developer with passion to create "}
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+            </span>
+            <span className="text-xs font-medium tracking-wider text-foreground">
+              Available for Freelance
+            </span>
+          </div>
+        </ScrollReveal>
+
+        {/* Heading */}
+        <ScrollReveal delay={80}>
+          <h1 className="mt-6 max-w-3xl text-balance text-center text-4xl font-bold leading-[1.1] tracking-tight text-foreground md:text-6xl lg:text-7xl">
+            {"Frontend developer with a passion for "}
             <span className="font-light italic text-primary">
-              great experiences
+              great design
             </span>
           </h1>
         </ScrollReveal>
 
-        <ScrollReveal delay={100}>
-          <div className="my-8 h-px w-20 bg-primary" />
-        </ScrollReveal>
-
-        <ScrollReveal delay={150}>
-          <p className="max-w-xl font-body text-base leading-relaxed text-muted-foreground">
-            {"I'm Brandon, a Frontend Developer living in Munich, and I focus on making digital experiences that are easy to use, enjoyable, and get the job done."}
+        {/* Description */}
+        <ScrollReveal delay={140}>
+          <p className="mx-auto mt-6 max-w-xl text-center font-body text-base leading-relaxed text-muted-foreground">
+            {"I'm Brandon, a Frontend Developer living in Saline County, and I focus on making digital experiences that are easy to use, enjoyable, and get the job done."}
           </p>
         </ScrollReveal>
 
+        {/* CTA */}
         <ScrollReveal delay={200}>
-          <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center">
-            <div className="flex flex-wrap items-center gap-4">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="flex items-center gap-1 text-xs font-medium uppercase tracking-wider text-foreground transition-colors hover:text-primary"
-                >
-                  {link.label}
-                  <ArrowUpRight className="h-3 w-3" />
-                </a>
-              ))}
-            </div>
+          <Link
+            to="/contact"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-lg"
+          >
+            {"Let's Talk"}
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </ScrollReveal>
 
-            <div className="sm:ml-auto">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                {"Let's Talk"}
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+        {/* Hero Image with gradient overlay and decorative dots */}
+        <ScrollReveal delay={250}>
+          <div className="relative mx-auto mt-16 max-w-5xl">
+            <img
+              src="/images/TherapyMockup.png"
+              alt="Safe Space therapy platform mockup showcasing frontend development work"
+              className="aspect-video max-h-[500px] w-full rounded-xl object-cover"
+            />
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-background via-transparent to-transparent" />
+
+            {/* Decorative dot patterns */}
+            <div className="absolute -top-28 -right-28 -z-10 hidden aspect-video h-72 w-96 opacity-40 sm:block sm:bg-[radial-gradient(hsl(var(--muted-foreground))_1px,transparent_1px)] [background-size:12px_12px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_20%,transparent_100%)]" />
+            <div className="absolute -top-28 -left-28 -z-10 hidden aspect-video h-72 w-96 opacity-40 sm:block sm:bg-[radial-gradient(hsl(var(--muted-foreground))_1px,transparent_1px)] [background-size:12px_12px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_20%,transparent_100%)]" />
           </div>
         </ScrollReveal>
       </div>

@@ -4,7 +4,7 @@ import { blogPosts } from '@/lib/data'
 
 export function InsightsSection() {
   return (
-    <section className="px-6 py-20 lg:px-10 lg:py-28">
+    <section className="px-6 py-28 lg:px-10 lg:py-36">
       <div className="mx-auto max-w-[1400px]">
         <ScrollReveal>
           <div className="mb-10 flex items-center justify-between">

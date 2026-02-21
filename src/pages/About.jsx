@@ -17,10 +17,10 @@ export default function About() {
       <Navigation />
 
       {/* Hero */}
-      <section className="px-6 pb-16 pt-32 lg:px-10 lg:pt-40">
+      <section className="px-6 pb-20 pt-36 lg:px-10 lg:pb-28 lg:pt-44">
         <div className="mx-auto max-w-[1400px] text-center">
           <ScrollReveal>
-            <h1 className="mx-auto max-w-4xl text-balance text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-[88px]">
+            <h1 className="mx-auto max-w-4xl text-balance text-4xl font-bold leading-[1.1] tracking-tight text-foreground md:text-6xl lg:text-7xl">
               <span className="font-light italic text-primary">About me, </span>
               a Frontend Developer living in Saline County.
             </h1>
@@ -50,16 +50,16 @@ export default function About() {
       </section>
 
       {/* Bio */}
-      <section className="px-6 py-20 lg:px-10 lg:py-28">
+      <section className="px-6 py-28 lg:px-10 lg:py-36">
         <div className="mx-auto max-w-[900px]">
           <ScrollReveal>
-            <h2 className="text-balance text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl lg:text-[44px]">
+            <h2 className="text-balance text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">
               {"I'm the frontend developer you need to take your digital presence to the next level"}
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="mt-10 grid gap-8 md:grid-cols-2">
               <p className="font-body text-base leading-relaxed text-muted-foreground">
                 With a collaborative mindset and a dedication to their craft, I work closely with clients to understand their goals and objectives, providing tailored design solutions that meet their unique needs.
               </p>
@@ -76,9 +76,14 @@ export default function About() {
       <SkillsSection />
 
       {/* Experience */}
-      <section className="px-6 pb-20 lg:px-10 lg:pb-28">
+      <section className="px-6 py-28 lg:px-10 lg:py-36">
         <div className="mx-auto max-w-[900px]">
           <ScrollReveal>
+            <h2 className="mb-12 text-3xl font-bold tracking-tight text-foreground">
+              Experience
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={80}>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
               {experience.map((exp, i) => (
                 <div key={i} className="border-t border-border pt-6">
@@ -97,10 +102,10 @@ export default function About() {
       </section>
 
       {/* Clients */}
-      <section className="px-6 py-20 lg:px-10 lg:py-28">
+      <section className="px-6 py-28 lg:px-10 lg:py-36">
         <div className="mx-auto max-w-[900px]">
           <ScrollReveal>
-            <h2 className="mb-10 text-3xl font-bold tracking-tight text-foreground">
+            <h2 className="mb-12 text-3xl font-bold tracking-tight text-foreground">
               Clients
             </h2>
           </ScrollReveal>
@@ -131,10 +136,10 @@ export default function About() {
       </section>
 
       {/* Award Feature */}
-      <section className="px-6 py-20 lg:px-10 lg:py-28">
+      <section className="px-6 py-28 lg:px-10 lg:py-36">
         <div className="mx-auto max-w-[900px]">
           <ScrollReveal>
-            <div className="flex flex-col gap-8 md:flex-row md:items-center md:gap-12">
+            <div className="flex flex-col gap-10 md:flex-row md:items-center md:gap-14">
               <div className="relative aspect-square w-full max-w-[280px] overflow-hidden rounded-2xl bg-secondary">
                 <img
                   src="/images/award-trophy.jpg"
@@ -155,11 +160,11 @@ export default function About() {
                   <ArrowUpRight className="h-4 w-4" />
                 </button>
 
-                <div className="mt-8">
+                <div className="mt-10">
                   {awards.map((award, i) => (
                     <div
                       key={i}
-                      className="group flex cursor-pointer items-center justify-between border-b border-border py-4 transition-colors hover:bg-secondary/30"
+                      className="group flex cursor-pointer items-center justify-between border-b border-border py-5 transition-colors hover:bg-secondary/30"
                     >
                       <div>
                         <h3 className="text-sm font-semibold text-foreground">
