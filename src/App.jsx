@@ -59,7 +59,7 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <LenisProvider>
         <ScrollToTop />
         <ScrollProgress />
