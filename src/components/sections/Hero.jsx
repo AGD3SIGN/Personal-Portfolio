@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
+import { asset } from '@/lib/utils'
 
 export function Hero() {
   return (
@@ -51,7 +52,7 @@ export function Hero() {
         <ScrollReveal delay={250}>
           <div className="relative mx-auto mt-16 max-w-5xl">
             <img
-              src="/images/TherapyMockup.png"
+              src={asset('/images/TherapyMockup.png')}
               alt="Safe Space therapy platform mockup showcasing frontend development work"
               className="aspect-video max-h-[500px] w-full rounded-xl object-cover"
             />

@@ -6,6 +6,7 @@ import { Footer } from '@/components/layout/Footer'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { AnimatedMetric } from '@/components/shared/AnimatedMetric'
 import { projects } from '@/lib/data'
+import { asset } from '@/lib/utils'
 
 export default function CaseStudy() {
   const { slug } = useParams()
@@ -45,7 +46,7 @@ export default function CaseStudy() {
                 width={1200}
                 height={675}
                 className="absolute inset-0 h-full w-full object-cover"
-                onError={(e) => { e.target.src = '/images/placeholder.svg' }}
+                onError={(e) => { e.target.src = asset('/images/placeholder.svg') }}
               />
             </div>
           </ScrollReveal>
@@ -133,24 +134,24 @@ export default function CaseStudy() {
                 <div className="mt-14 grid gap-4 md:grid-cols-2">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-secondary">
                     <img
-                      src="/images/project-wepay-phone.jpg"
+                      src={asset('/images/project-wepay-phone.jpg')}
                       alt="Project screenshot 1"
                       width={700}
                       height={525}
                       className="absolute inset-0 h-full w-full object-cover"
                       loading="lazy"
-                      onError={(e) => { e.target.src = '/images/placeholder.svg' }}
+                      onError={(e) => { e.target.src = asset('/images/placeholder.svg') }}
                     />
                   </div>
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-secondary">
                     <img
-                      src="/images/project-payrole-phone.jpg"
+                      src={asset('/images/project-payrole-phone.jpg')}
                       alt="Project screenshot 2"
                       width={700}
                       height={525}
                       className="absolute inset-0 h-full w-full object-cover"
                       loading="lazy"
-                      onError={(e) => { e.target.src = '/images/placeholder.svg' }}
+                      onError={(e) => { e.target.src = asset('/images/placeholder.svg') }}
                     />
                   </div>
                 </div>
@@ -160,13 +161,13 @@ export default function CaseStudy() {
               <ScrollReveal>
                 <div className="mt-4 relative aspect-[2/1] overflow-hidden rounded-xl bg-secondary">
                   <img
-                    src="/images/project-estatery-laptop-2.jpg"
+                    src={asset('/images/project-estatery-laptop-2.jpg')}
                     alt="Project full view"
                     width={1400}
                     height={700}
                     className="absolute inset-0 h-full w-full object-cover"
                     loading="lazy"
-                    onError={(e) => { e.target.src = '/images/placeholder.svg' }}
+                    onError={(e) => { e.target.src = asset('/images/placeholder.svg') }}
                   />
                 </div>
               </ScrollReveal>
@@ -232,7 +233,7 @@ export default function CaseStudy() {
                       alt={`${p.title} project mockup`}
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
-                      onError={(e) => { e.target.src = '/images/placeholder.svg' }}
+                      onError={(e) => { e.target.src = asset('/images/placeholder.svg') }}
                     />
                   </div>
                   <div className="mt-4 flex items-center justify-between">

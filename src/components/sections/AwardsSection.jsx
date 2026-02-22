@@ -1,6 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { awards } from '@/lib/data'
+import { asset } from '@/lib/utils'
 
 export function AwardsSection() {
   return (
@@ -10,11 +11,11 @@ export function AwardsSection() {
           <ScrollReveal className="lg:w-2/5">
             <div className="relative aspect-square max-w-xs overflow-hidden rounded-2xl bg-secondary">
               <img
-                src="/images/award-trophy.jpg"
+                src={asset('/images/award-trophy.jpg')}
                 alt="Design award trophy"
                 className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
-                onError={(e) => { e.target.src = '/images/placeholder.svg' }}
+                onError={(e) => { e.target.src = asset('/images/placeholder.svg') }}
               />
             </div>
             <h2 className="mt-6 text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">

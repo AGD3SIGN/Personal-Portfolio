@@ -6,6 +6,7 @@ import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { ApproachSection } from '@/components/sections/ApproachSection'
 import { SkillsSection } from '@/components/sections/SkillsSection'
 import { experience, clients, awards } from '@/lib/data'
+import { asset } from '@/lib/utils'
 
 export default function About() {
   useEffect(() => {
@@ -40,7 +41,7 @@ export default function About() {
           <ScrollReveal>
             <div className="relative aspect-[3/2] overflow-hidden rounded-2xl">
               <img
-                src="/images/about.jpg"
+                src={asset('/images/about.jpg')}
                 alt="Portrait of Brandon Torres, a frontend developer"
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -142,11 +143,11 @@ export default function About() {
             <div className="flex flex-col gap-10 md:flex-row md:items-center md:gap-14">
               <div className="relative aspect-square w-full max-w-[280px] overflow-hidden rounded-2xl bg-secondary">
                 <img
-                  src="/images/award-trophy.jpg"
+                  src={asset('/images/award-trophy.jpg')}
                   alt="Design award trophy"
                   className="absolute inset-0 h-full w-full object-cover"
                   loading="lazy"
-                  onError={(e) => { e.target.src = '/images/placeholder.svg' }}
+                  onError={(e) => { e.target.src = asset('/images/placeholder.svg') }}
                 />
               </div>
               <div>

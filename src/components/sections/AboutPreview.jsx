@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { Button } from '@/components/ui/button'
-import { Separator } from '@/components/ui/separator'
+import { asset } from '@/lib/utils'
 
 const achievements = [
   { label: 'Years Experience', value: '5+' },
@@ -33,7 +33,7 @@ export function AboutPreview() {
         <ScrollReveal delay={120}>
           <div className="grid gap-7 lg:grid-cols-3">
             <img
-              src="/images/brandon.png"
+              src={asset('/images/brandon.png')}
               alt="Portrait of Brandon Torres"
               className="size-full max-h-[620px] rounded-xl object-cover lg:col-span-2"
             />
@@ -57,11 +57,11 @@ export function AboutPreview() {
               </div>
               {/* Secondary Image */}
               <img
-                src="/images/about.jpg"
+                src={asset('/images/about.jpg')}
                 alt="Brandon Torres working"
                 className="grow basis-0 rounded-xl object-cover md:w-1/2 lg:min-h-0 lg:w-auto"
                 loading="lazy"
-                onError={(e) => { e.target.src = '/images/placeholder.svg' }}
+                onError={(e) => { e.target.src = asset('/images/placeholder.svg') }}
               />
             </div>
           </div>

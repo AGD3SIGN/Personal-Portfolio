@@ -1,10 +1,12 @@
+import { asset } from '@/lib/utils'
+
 export const projects = [
   {
     slug: 'Safe Space',
     title: 'Safe Space',
     category: 'UIUX',
     description: 'A React Therapy Platform for Mental Health',
-    image: '/images/TherapyMockup.png',
+    image: asset('/images/TherapyMockup.png'),
     featured: true,
     size: 'large',
     date: 'January 25, 2026',
@@ -32,7 +34,7 @@ export const projects = [
     title: 'Wepay',
     category: 'Branding',
     description: 'A modern fintech payment solution with clean, user-friendly interface design.',
-    image: '/images/project-wepay-phone.jpg',
+    image: asset('/images/project-wepay-phone.jpg'),
     featured: true,
     size: 'medium',
     date: 'June 12, 2023',
@@ -60,7 +62,7 @@ export const projects = [
     title: 'Payrole',
     category: 'Mobile App',
     description: 'A comprehensive payroll management system designed for modern businesses.',
-    image: '/images/project-payrole-phone.jpg',
+    image: asset('/images/project-payrole-phone.jpg'),
     featured: true,
     size: 'medium',
     date: 'August 20, 2023',
@@ -210,11 +212,11 @@ export const blogPosts = [
   {
     title: 'The Power of Typography in Visual Design: Enhancing Communication and Impact',
     date: 'Feb 1, 2023',
-    image: '/images/blog-typography.jpg',
+    image: asset('/images/blog-typography.jpg'),
   },
   {
     title: 'Designing for User Experience: Creating Intuitive and Engaging Interfaces',
     date: 'April 5, 2023',
-    image: '/images/blog-ux.jpg',
+    image: asset('/images/blog-ux.jpg'),
   },
 ]

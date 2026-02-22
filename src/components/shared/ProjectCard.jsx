@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
+import { asset } from '@/lib/utils'
 
 export function ProjectCard({ project, wide = false }) {
   return (
@@ -16,7 +17,7 @@ export function ProjectCard({ project, wide = false }) {
           height={wide ? 700 : 525}
           className="absolute inset-0 h-full w-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-[0.6]"
           loading="lazy"
-          onError={(e) => { e.target.src = '/images/placeholder.svg' }}
+          onError={(e) => { e.target.src = asset('/images/placeholder.svg') }}
         />
 
         <div className="absolute inset-x-0 bottom-0 flex translate-y-4 flex-col justify-end p-6 opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100">
