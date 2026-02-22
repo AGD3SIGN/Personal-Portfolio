@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
@@ -12,12 +12,6 @@ export default function CaseStudy() {
   const { slug } = useParams()
   const project = projects.find((p) => p.slug === slug)
 
-  useEffect(() => {
-    if (project) {
-      document.title = `${project.title} | showcasy.`
-    }
-  }, [project])
-
   if (!project) {
     return <Navigate to="/works" replace />
   }
@@ -26,6 +20,14 @@ export default function CaseStudy() {
 
   return (
     <main>
+      <Helmet>
+        <title>{project.title} | Brandon Torres - Frontend Developer</title>
+        <meta name="description" content={project.description || `Case study for ${project.title} — a ${project.category} project by Brandon Torres.`} />
+        <meta property="og:title" content={`${project.title} | Brandon Torres`} />
+        <meta property="og:description" content={project.description || `Case study for ${project.title}`} />
+        <meta property="og:image" content={project.image} />
+        <link rel="canonical" href={`https://www.brandonjosephtorres.com/works/${project.slug}`} />
+      </Helmet>
       <Navigation />
 
       {/* Hero */}

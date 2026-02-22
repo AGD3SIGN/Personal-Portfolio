@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { ArrowUpRight } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
@@ -9,12 +9,13 @@ import { experience, clients, awards } from '@/lib/data'
 import { asset } from '@/lib/utils'
 
 export default function About() {
-  useEffect(() => {
-    document.title = 'About Me | showcasy.'
-  }, [])
-
   return (
     <main>
+      <Helmet>
+        <title>About | Brandon Torres - Frontend Developer</title>
+        <meta name="description" content="Learn about Brandon Torres, a frontend developer with 5+ years of experience building intuitive websites and applications. Explore my skills, approach, and experience." />
+        <link rel="canonical" href="https://www.brandonjosephtorres.com/about" />
+      </Helmet>
       <Navigation />
 
       {/* Hero */}

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
 import { Hero } from '@/components/sections/Hero'
@@ -11,6 +12,11 @@ import { InsightsSection } from '@/components/sections/InsightsSection'
 export default function Home() {
   return (
     <main>
+      <Helmet>
+        <title>Brandon Torres | Frontend Developer Portfolio</title>
+        <meta name="description" content="Frontend developer based in Saline County with 5+ years of experience creating intuitive, user-friendly websites and applications. Available for freelance." />
+        <link rel="canonical" href="https://www.brandonjosephtorres.com/" />
+      </Helmet>
       <Navigation />
       <Hero />
       <AboutPreview />

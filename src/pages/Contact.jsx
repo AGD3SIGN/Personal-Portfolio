@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
@@ -31,10 +32,6 @@ export default function Contact() {
     message: '',
   })
 
-  useEffect(() => {
-    document.title = 'Contact | showcasy.'
-  }, [])
-
   const toggleService = (service) => {
     setSelectedServices((prev) =>
       prev.includes(service)
@@ -65,6 +62,11 @@ export default function Contact() {
 
   return (
     <main>
+      <Helmet>
+        <title>Contact | Brandon Torres - Frontend Developer</title>
+        <meta name="description" content="Get in touch with Brandon Torres for freelance frontend development, web design, and React projects. Available for new opportunities." />
+        <link rel="canonical" href="https://www.brandonjosephtorres.com/contact" />
+      </Helmet>
       <Navigation />
 
       {/* Hero */}

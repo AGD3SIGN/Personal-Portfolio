@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
@@ -6,12 +6,13 @@ import { ProjectCard } from '@/components/shared/ProjectCard'
 import { projects } from '@/lib/data'
 
 export default function Works() {
-  useEffect(() => {
-    document.title = 'Works | showcasy.'
-  }, [])
-
   return (
     <main>
+      <Helmet>
+        <title>Works | Brandon Torres - Frontend Developer Portfolio</title>
+        <meta name="description" content="Browse my portfolio of frontend development projects including web applications, UI/UX design, and React builds." />
+        <link rel="canonical" href="https://www.brandonjosephtorres.com/works" />
+      </Helmet>
       <Navigation />
 
       {/* Hero */}
