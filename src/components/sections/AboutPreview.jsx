@@ -24,7 +24,7 @@ export function AboutPreview() {
           </ScrollReveal>
           <ScrollReveal delay={80}>
             <p className="font-body text-base leading-relaxed text-muted-foreground">
-              Concentrate on your primary objective which is expanding your business, and leave it to me to ensure that your business is attracting the digital users and standing itself from the rivalry.
+              You've got a business to run — I get it. My job is to take the digital side off your plate and build you something that works hard for your brand around the clock. I build websites that don't just look good on a designer's screen — they look and feel great for your customers on every device they use to find you.
             </p>
           </ScrollReveal>
         </div>
@@ -39,18 +39,18 @@ export function AboutPreview() {
             />
             <div className="flex flex-col gap-7 md:flex-row lg:flex-col">
               {/* Breakout Card */}
-              <div className="flex flex-col justify-between gap-6 rounded-xl bg-muted p-7 md:w-1/2 lg:w-auto">
+              <div className="flex flex-col justify-between gap-6 rounded-xl bg-primary p-7 md:w-1/2 lg:w-auto">
                 <div>
-                  <p className="mb-2 text-lg font-semibold text-foreground">
+                  <p className="mb-2 text-lg font-semibold text-foreground text-black">
                     My Approach
                   </p>
-                  <p className="font-body text-sm text-muted-foreground">
-                    A transparent 6-step process from discovery to deployment — so you always know what to expect, what comes next, and where your investment is going.
+                  <p className="font-body text-sm text-muted-foreground text-black">
+                    I keep things simple and transparent. From our first conversation to the moment your site goes live, you'll always know where we are, what's coming next, and exactly what your investment is going toward — no surprises, no guesswork.
                   </p>
                 </div>
                 <Button variant="outline" className="mr-auto" asChild>
                   <Link to="/about#approach">
-                    See My Process
+                    Here's How I Work
                     <ArrowRight className="ml-2 h-3.5 w-3.5" />
                   </Link>
                 </Button>
@@ -72,10 +72,10 @@ export function AboutPreview() {
           <div className="relative mt-16 overflow-hidden rounded-xl bg-muted p-8 md:p-16">
             <div className="flex flex-col gap-4 text-center md:text-left">
               <h3 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-                Achievements in Numbers
+                What I've Built So Far
               </h3>
               <p className="max-w-xl font-body text-sm text-muted-foreground">
-                Building digital products that make an impact, one project at a time.
+                Every project teaches me something new — here's a snapshot of where I've been and what I've built along the way.
               </p>
             </div>
             <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 text-center lg:grid-cols-4">

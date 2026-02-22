@@ -30,7 +30,7 @@ export default function About() {
 
           <ScrollReveal delay={100}>
             <p className="mx-auto mt-8 max-w-2xl font-body text-base leading-relaxed text-muted-foreground">
-              With over 5+ years of experience, I find joy in creating intuitive and user-friendly websites and applications for a wide range of devices and platforms.
+              With a background rooted in web design and development, I've built up 5+ years of experience that shape the way I approach every project — creating websites that feel right on every screen, for every person using them.
             </p>
           </ScrollReveal>
         </div>
@@ -56,17 +56,17 @@ export default function About() {
         <div className="mx-auto max-w-[900px]">
           <ScrollReveal>
             <h2 className="text-balance text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">
-              {"I'm the frontend developer you need to take your digital presence to the next level"}
+              {"Let's build something your customers will enjoy using"}
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
             <div className="mt-10 grid gap-8 md:grid-cols-2">
               <p className="font-body text-base leading-relaxed text-muted-foreground">
-                With a collaborative mindset and a dedication to their craft, I work closely with clients to understand their goals and objectives, providing tailored design solutions that meet their unique needs.
+                I work closely with the people I build for — taking time to understand what your business actually needs before writing a single line of code. Every decision, from layout to functionality, is made with your goals and your customers in mind.
               </p>
               <p className="font-body text-base leading-relaxed text-muted-foreground">
-                Outside of work, you can find me exploring the latest design trends, attending design conferences, or working on personal projects.
+                When I'm not building, I'm staying busy — Outside of work, life is full and I wouldn't have it any other way. I'm a husband to a beautiful wife and dad to 5 kids — plus two dogs and a cat who keep things interesting. Most evenings you'll find me surrounded by noise, laughter, and probably someone asking for a snack. It's chaos, but it's my favorite kind.
               </p>
             </div>
           </ScrollReveal>

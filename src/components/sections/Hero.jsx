@@ -23,9 +23,9 @@ export function Hero() {
         {/* Heading */}
         <ScrollReveal delay={80}>
           <h1 className="mt-6 max-w-3xl text-balance text-center text-4xl font-bold leading-[1.1] tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            {"Frontend developer with a passion for "}
+            {"Websites That Work for Everyone,  "}
             <span className="font-light italic text-primary">
-              great design
+              on Everything.
             </span>
           </h1>
         </ScrollReveal>
@@ -33,7 +33,7 @@ export function Hero() {
         {/* Description */}
         <ScrollReveal delay={140}>
           <p className="mx-auto mt-6 max-w-xl text-center font-body text-base leading-relaxed text-muted-foreground">
-            {"I'm Brandon, a Frontend Developer living in Saline County, and I focus on making digital experiences that are easy to use, enjoyable, and get the job done."}
+            {"I'm Brandon, a Frontend Developer based in Saline County. I've felt the frustration of a site that falls apart on mobile — so I build for businesses who want to get their name out there without leaving anyone behind, no matter what device they're on. Take a look at my work below and see how I bring that to life."}
           </p>
         </ScrollReveal>
 
