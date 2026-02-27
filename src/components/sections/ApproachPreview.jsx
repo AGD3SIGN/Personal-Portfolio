@@ -14,7 +14,7 @@ export function ApproachPreview() {
                 My Approach
               </h2>
               <p className="mt-3 max-w-lg font-body text-sm leading-relaxed text-muted-foreground">
-                A clear, structured process so you always know what to expect.
+              No guesswork, no surprises. Here's exactly how we go from first conversation to a finished product you're proud of.
               </p>
             </div>
             <Link

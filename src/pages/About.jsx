@@ -66,7 +66,7 @@ export default function About() {
                 I work closely with the people I build for — taking time to understand what your business actually needs before writing a single line of code. Every decision, from layout to functionality, is made with your goals and your customers in mind.
               </p>
               <p className="font-body text-base leading-relaxed text-muted-foreground">
-                When I'm not building, I'm staying busy — Outside of work, life is full and I wouldn't have it any other way. I'm a husband to a beautiful wife and dad to 5 kids — plus two dogs and a cat who keep things interesting. Most evenings you'll find me surrounded by noise, laughter, and probably someone asking for a snack. It's chaos, but it's my favorite kind.
+                When I'm not building, I'm staying busy — Outside of work, life is full and I wouldn't have it any other way. I'm a husband to my beautiful wife and dad to 5 kids — plus two dogs and a cat who keep things interesting. Most evenings you'll find me surrounded by noise, laughter, and probably someone asking for a snack. It's chaos, but it's my favorite kind.
               </p>
             </div>
           </ScrollReveal>
