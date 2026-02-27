@@ -16,7 +16,7 @@ export const projects = [
     about: "At Safe Space Therapy, the goal is to make mental wellness approachable, private, and consistent. The platform combines compassionate care with modern technology, allowing individuals to book sessions, track emotional patterns, and access guided resources in one secure space. Clients can schedule appointments, journal their thoughts, monitor mood trends, and set personal goals — all within a calm, distraction-free interface designed to reduce friction and encourage routine. The experience emphasizes clarity, trust, and emotional safety from the first interaction.",
     clients: "The platform was designed for people who want support but struggle with traditional barriers — time, stigma, uncertainty, or accessibility. Many users were balancing demanding work schedules, caregiving responsibilities, or anxiety around in-person visits. They needed a simple, reassuring environment where they could check in regularly, communicate comfortably, and see progress over time. The product focuses on consistency rather than intensity, helping users build sustainable habits instead of relying on one-time interventions.",
     challenge: "Mental health platforms often overwhelm users with complex dashboards or clinical language. The challenge was to design an experience that felt calm rather than medical — structured without feeling rigid, supportive without feeling intrusive. Key design problems included: Reducing cognitive load during emotional moments, Making scheduling effortless, Encouraging continued engagement without pressure. The interface was intentionally simplified to guide users step-by-step, prioritizing emotional comfort over feature density.",
-    
+
     metrics: [
       { value: '$22.8M', label: 'Projected platform value in behavioral health market positioning' },
       { value: '+24%', label: 'Increase in session booking completion after UX redesign' },
@@ -102,61 +102,61 @@ export const approachSteps = [
   {
     number: '01',
     title: 'Introduction & Discovery',
-    description: 'Every great project starts with a conversation. I take the time to understand your vision, business goals, target audience, and project constraints before anything else.',
+    description: 'Before anything else, we talk. I want to understand your business, your goals and who you are trying to reach - because getting that right from the start makes everything else smoother.',
     details: [
       'Free initial consultation to discuss your project and goals',
-      'Detailed project brief with scope, timeline, and deliverables for your sign-off',
-      'Clear and transparent pricing with no hidden costs',
+      'A clear project brief covering scope, timeline, and deliverables — nothing moves forward until you are happy with it',
+      'Straightforward, transparent pricing with no hidden costs',
     ],
   },
   {
     number: '02',
     title: 'Research & Strategy',
-    description: 'I dig into your industry, analyze competitors, and map out a technical strategy that positions your product for success.',
+    description: 'Once I know your goals, I do my homework. I look at your industry, see what your competitors are doing, and figure out the smartest path forward for your specific situation.',
     details: [
-      'Competitor audit and market landscape analysis',
-      'User persona and journey mapping to guide design decisions',
-      'Technology recommendations tailored to your budget and scale',
+      'A look at your competitors and where you fit in the market',
+      'Understanding your audience so every design decision has a reason behind it',
+      'Technology recommendations that fit your budget and where you want to grow',
     ],
   },
   {
     number: '03',
     title: 'Design & Prototyping',
-    description: 'From wireframes to pixel-perfect mockups, I design with intention. You see and approve every screen before a single line of code is written.',
+    description: 'This is where things start to take shape. I will build out wire-frames and mockups so you can see exactly what your site will look and feel like before a single line of code gets written. No surprises — you approve everything before we start coding.',
     details: [
-      'Wireframes and interactive prototypes you can click through',
-      'Up to two rounds of design revisions included at every stage',
-      'Design system with reusable components for long-term consistency',
+      'Interactive prototypes you can actually click through and explore',
+      'Up to two rounds of revisions at every stage so we get it right',
+      'A consistent design foundation that keeps your site looking sharp long-term',
     ],
   },
   {
     number: '04',
     title: 'Development',
-    description: 'Clean, performant code built with modern frameworks. I develop responsively and keep you in the loop with regular progress demos.',
+    description: 'Once the design is locked in, I get to work building it — clean, responsive code that looks and performs great on every device. You will not be left wondering what is going on either; I keep you updated along the way.',
     details: [
-      'Weekly progress updates with live preview links',
-      'Responsive builds tested across devices and browsers',
-      'Version-controlled code you fully own from day one',
+      'Regular progress updates with live preview links so you can see it coming together',
+      'Fully responsive builds tested across devices and browsers',
+      'Code you completely own from day one — no strings attached',
     ],
   },
   {
     number: '05',
     title: 'Testing & QA',
-    description: 'Before anything goes live, I run thorough testing to make sure everything works flawlessly for every user on every device.',
+    description: 'Nothing goes live until I am confident it is ready. I put the site through its paces across devices, browsers, and connection speeds so your visitors get a smooth experience every single time.',
     details: [
-      'Cross-browser and cross-device compatibility testing',
-      'Performance optimization for fast load times',
-      'Accessibility review to meet WCAG standards',
+      'Cross-browser and cross-device testing to catch anything before your users do',
+      'Performance checks to make sure your site loads fast and does not keep people waiting',
+      'Accessibility review so your site works for as many people as possible',
     ],
   },
   {
     number: '06',
     title: 'Deployment & Maintenance',
-    description: 'Launch day is just the beginning. I handle deployment and offer ongoing support to keep your product running smoothly.',
+    description: 'Launch day is exciting — and I make sure it goes smoothly. I handle getting your site live and stick around afterward to make sure everything keeps running the way it should. You will not be left wondering what to do next once the project is done.',
     details: [
-      'Managed deployment to your hosting platform of choice',
-      '30 days of post-launch bug fixes included at no extra cost',
-      'Optional maintenance plans for updates and new features',
+      'I host your site on my own managed servers, so you are dealing with me directly — not a faceless third party — if anything ever comes up',
+      '30 days of post-launch bug fixes included — no extra charge, no questions asked',
+      'Optional maintenance plans if you want ongoing support for updates and new features down the road',
     ],
   },
 ]

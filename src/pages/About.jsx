@@ -4,7 +4,7 @@ import { Navigation } from '@/components/layout/Navigation'
 import { Footer } from '@/components/layout/Footer'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { ApproachSection } from '@/components/sections/ApproachSection'
-import { SkillsSection } from '@/components/sections/SkillsSection'
+import { SkillsMarquee as SkillsSection } from '@/components/sections/SkillsMarquee'
 import { experience, clients, awards } from '@/lib/data'
 import { asset } from '@/lib/utils'
 

@@ -61,16 +61,14 @@ function StepContent({ step, align }) {
         {step.description}
       </p>
       <ul
-        className={`mt-4 flex flex-col gap-2 ${
-          align === 'right' ? 'items-end' : 'items-start'
-        }`}
+        className={`mt-4 flex flex-col gap-2 ${align === 'right' ? 'items-end' : 'items-start'
+          }`}
       >
         {step.details.map((detail, i) => (
           <li
             key={i}
-            className={`flex items-start gap-2.5 font-body text-xs leading-relaxed text-muted-foreground ${
-              align === 'right' ? 'flex-row-reverse text-right' : ''
-            }`}
+            className={`flex items-start gap-2.5 font-body text-xs leading-relaxed text-muted-foreground ${align === 'right' ? 'flex-row-reverse text-right' : ''
+              }`}
           >
             <span className="mt-1 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
             {detail}
@@ -101,7 +99,7 @@ export function ApproachSection() {
             My Approach
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center font-body text-base leading-relaxed text-muted-foreground">
-            A transparent, step-by-step process designed to keep you informed and confident from our first conversation to launch day and beyond.
+            No guesswork, no surprises. Here's exactly how we go from first conversation to a finished product you're proud of.
           </p>
         </ScrollReveal>
       </div>

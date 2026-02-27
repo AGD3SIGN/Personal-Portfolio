@@ -65,10 +65,20 @@ export default {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        'marquee-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-25%)' },
+        },
+        'marquee-right': {
+          '0%': { transform: 'translateX(-25%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
       },
       animation: {
         'fade-up': 'fade-up 0.6s ease-out forwards',
         'fade-in': 'fade-in 0.5s ease-out forwards',
+        'marquee-left': 'marquee-left 25s linear infinite',
+        'marquee-right': 'marquee-right 25s linear infinite',
       },
     },
   },
