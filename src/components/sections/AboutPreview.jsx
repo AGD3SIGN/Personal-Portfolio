@@ -41,10 +41,10 @@ export function AboutPreview() {
               {/* Breakout Card */}
               <div className="flex flex-col justify-between gap-6 rounded-xl bg-primary p-7 md:w-1/2 lg:w-auto">
                 <div>
-                  <p className="mb-2 text-lg font-semibold text-foreground text-black">
+                  <p className="mb-2 text-lg font-semibold text-black">
                     My Approach
                   </p>
-                  <p className="font-body text-sm text-muted-foreground text-black">
+                  <p className="font-body text-sm text-black/70">
                     I keep things simple and transparent. From our first conversation to the moment your site goes live, you'll always know where we are, what's coming next, and exactly what your investment is going toward — no surprises, no guesswork.
                   </p>
                 </div>

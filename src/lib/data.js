@@ -22,6 +22,10 @@ export const projects = [
       { value: '+24%', label: 'Increase in session booking completion after UX redesign' },
       { value: '~400K', label: 'Monthly check-ins and mood logs recorded by users' },
     ],
+    galleryImages: {
+      top: [asset('/images/TherapyPhone1.png'), asset('/images/TherapyPhone2.png')],
+      bottom: asset('/images/TherapyMac.png'),
+    },
     // testimonial: {
     //   quote: 'Working with Brandon was a game-changer for our business. His keen eye for detail and deep understanding of user experience resulted in designs that not only looked great but also enhanced the overall usability of our product.',
     //   author: 'Jacob McDany',

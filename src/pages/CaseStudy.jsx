@@ -136,7 +136,7 @@ export default function CaseStudy() {
                 <div className="mt-14 grid gap-4 md:grid-cols-2">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-secondary">
                     <img
-                      src={asset('/images/project-wepay-phone.jpg')}
+                      src={project.galleryImages ? project.galleryImages.top[0] : asset('/images/project-wepay-phone.jpg')}
                       alt="Project screenshot 1"
                       width={700}
                       height={525}
@@ -147,7 +147,7 @@ export default function CaseStudy() {
                   </div>
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-secondary">
                     <img
-                      src={asset('/images/project-payrole-phone.jpg')}
+                      src={project.galleryImages ? project.galleryImages.top[1] : asset('/images/project-payrole-phone.jpg')}
                       alt="Project screenshot 2"
                       width={700}
                       height={525}
@@ -163,7 +163,7 @@ export default function CaseStudy() {
               <ScrollReveal>
                 <div className="mt-4 relative aspect-[2/1] overflow-hidden rounded-xl bg-secondary">
                   <img
-                    src={asset('/images/project-estatery-laptop-2.jpg')}
+                    src={project.galleryImages ? project.galleryImages.bottom : asset('/images/project-estatery-laptop-2.jpg')}
                     alt="Project full view"
                     width={1400}
                     height={700}
