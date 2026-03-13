@@ -36,7 +36,7 @@ export default function CaseStudy() {
           <ScrollReveal>
             <p className="font-body text-sm text-muted-foreground">{project.title}</p>
             <h1 className="mt-3 max-w-2xl text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              Unleash Your Potential and Push Beyond Limits
+              {project.description}
             </h1>
           </ScrollReveal>
 
@@ -82,6 +82,8 @@ export default function CaseStudy() {
                     </div>
                     <a
                       href={project.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex w-fit items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
                     >
                       Visit Website
@@ -115,18 +117,20 @@ export default function CaseStudy() {
                 </p>
               </ScrollReveal>
 
-              <ScrollReveal>
-                <h2 className="mt-14 text-3xl font-bold tracking-tight text-foreground">Results</h2>
-                <p className="mt-4 font-body text-base leading-relaxed text-muted-foreground">
-                  {project.results}
-                </p>
-              </ScrollReveal>
+              {project.results && (
+                <ScrollReveal>
+                  <h2 className="mt-14 text-3xl font-bold tracking-tight text-foreground">Results</h2>
+                  <p className="mt-4 font-body text-base leading-relaxed text-muted-foreground">
+                    {project.results}
+                  </p>
+                </ScrollReveal>
+              )}
 
               {/* Metrics */}
               <ScrollReveal>
                 <div className="mt-10 grid grid-cols-3 gap-6">
-                  {project.metrics.map((metric, i) => (
-                    <AnimatedMetric key={i} value={metric.value} label={metric.label} />
+                  {project.metrics.map((metric) => (
+                    <AnimatedMetric key={metric.label} value={metric.value} label={metric.label} />
                   ))}
                 </div>
               </ScrollReveal>

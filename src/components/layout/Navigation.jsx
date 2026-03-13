@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ArrowRight, ArrowUpRight, X, Sun, Moon } from 'lucide-react'
-import { useTheme } from '@/hooks/useTheme'
+import { ArrowRight, ArrowUpRight, X } from 'lucide-react'
 
 const navItems = [
   { label: 'Home', href: '/', number: '01' },
@@ -22,7 +21,6 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { pathname } = useLocation()
-  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,14 +64,6 @@ export function Navigation() {
           </Link>
 
           <div className="flex items-center gap-3">
-            <button
-              onClick={toggleTheme}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
-              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-            >
-              {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            </button>
-
             <Link
               to="/contact"
               className="hidden items-center gap-2 rounded-full border border-primary px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground sm:flex"
@@ -175,21 +165,6 @@ export function Navigation() {
                       <ArrowUpRight className="h-3 w-3" />
                     </a>
                   ))}
-                </div>
-              </div>
-              <div>
-                <p className="mb-3 text-sm text-muted-foreground">
-                  Stay connected w/ me.
-                </p>
-                <div className="flex items-center border-b border-border pb-2">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full bg-transparent text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none md:w-64"
-                  />
-                  <button aria-label="Subscribe" className="text-muted-foreground hover:text-foreground">
-                    <ArrowUpRight className="h-4 w-4" />
-                  </button>
                 </div>
               </div>
             </div>

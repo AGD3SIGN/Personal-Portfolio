@@ -87,8 +87,8 @@ export default function About() {
           </ScrollReveal>
           <ScrollReveal delay={80}>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-              {experience.map((exp, i) => (
-                <div key={i} className="border-t border-border pt-6">
+              {experience.map((exp) => (
+                <div key={exp.period} className="border-t border-border pt-6">
                   <p className="font-body text-xs text-muted-foreground">{exp.period}</p>
                   <p className="mt-3 text-4xl font-bold tracking-tight text-foreground md:text-5xl">
                     {exp.duration}
@@ -153,7 +153,7 @@ export default function About() {
               </div>
               <div>
                 <h2 className="text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">
-                  Awwards Winning - Independent of The Year
+                  Awwwards Winning - Independent of The Year
                 </h2>
                 <p className="mt-3 font-body text-sm text-muted-foreground">
                   Brandon Torres - 2022
@@ -163,9 +163,9 @@ export default function About() {
                 </button>
 
                 <div className="mt-10">
-                  {awards.map((award, i) => (
+                  {awards.map((award) => (
                     <div
-                      key={i}
+                      key={`${award.title}-${award.year}`}
                       className="group flex cursor-pointer items-center justify-between border-b border-border py-5 transition-colors hover:bg-secondary/30"
                     >
                       <div>

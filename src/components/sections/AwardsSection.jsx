@@ -19,7 +19,7 @@ export function AwardsSection() {
               />
             </div>
             <h2 className="mt-6 text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">
-              Awwards Winning - Independent of The Year
+              Awwwards Winning - Independent of The Year
             </h2>
             <p className="mt-2 font-body text-sm text-muted-foreground">
               Brandon Torres - 2022
@@ -28,7 +28,7 @@ export function AwardsSection() {
 
           <div className="flex flex-1 flex-col justify-end lg:w-3/5">
             {awards.map((award, i) => (
-              <ScrollReveal key={i} delay={i * 80}>
+              <ScrollReveal key={`${award.title}-${award.year}`} delay={i * 80}>
                 <div className="group flex cursor-pointer items-center justify-between border-b border-border py-5 transition-colors hover:bg-secondary/50">
                   <div>
                     <h3 className="text-lg font-semibold text-foreground">

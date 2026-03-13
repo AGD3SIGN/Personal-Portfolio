@@ -66,7 +66,7 @@ function StepContent({ step, align }) {
       >
         {step.details.map((detail, i) => (
           <li
-            key={i}
+            key={detail}
             className={`flex items-start gap-2.5 font-body text-xs leading-relaxed text-muted-foreground ${align === 'right' ? 'flex-row-reverse text-right' : ''
               }`}
           >

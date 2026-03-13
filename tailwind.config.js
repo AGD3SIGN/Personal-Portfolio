@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: ['class'],
+  darkMode: 'media',
   content: [
     './index.html',
     './src/**/*.{js,jsx}',
@@ -41,11 +41,6 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        'dark-bg': 'hsl(var(--dark-bg))',
-        'dark-card': 'hsl(var(--dark-card))',
-        'dark-border': 'hsl(var(--dark-border))',
-        'dark-text': 'hsl(var(--dark-text))',
-        'dark-text-muted': 'hsl(var(--dark-text-muted))',
       },
       fontFamily: {
         sans: ['Space Grotesk', 'sans-serif'],

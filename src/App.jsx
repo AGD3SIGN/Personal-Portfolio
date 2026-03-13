@@ -24,13 +24,15 @@ function LenisProvider({ children }) {
     lenisRef.current = lenis
     window.__lenis = lenis
 
+    let rafId
     function raf(time) {
       lenis.raf(time)
-      requestAnimationFrame(raf)
+      rafId = requestAnimationFrame(raf)
     }
-    requestAnimationFrame(raf)
+    rafId = requestAnimationFrame(raf)
 
     return () => {
+      cancelAnimationFrame(rafId)
       lenis.destroy()
       window.__lenis = null
     }

@@ -75,7 +75,7 @@ export function Footer() {
                 <span className="font-bold">casy.</span>
               </Link>
               <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-                A freelance frontend developer currently based in Berlin
+                A freelance frontend developer based in Saline County
               </p>
             </div>
 

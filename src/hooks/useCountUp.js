@@ -14,6 +14,7 @@ export function useCountUp(target, duration = 1500) {
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true
           const start = performance.now()
+          let rafId
 
           const animate = (now) => {
             const elapsed = now - start
@@ -23,11 +24,12 @@ export function useCountUp(target, duration = 1500) {
             setCount(Math.round(eased * target))
 
             if (progress < 1) {
-              requestAnimationFrame(animate)
+              rafId = requestAnimationFrame(animate)
             }
           }
 
-          requestAnimationFrame(animate)
+          rafId = requestAnimationFrame(animate)
+          return () => cancelAnimationFrame(rafId)
         }
       },
       { threshold: 0.3 }

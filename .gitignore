@@ -1,3 +1,6 @@
+# Server-side files with credentials (upload manually to DreamHost, do not commit)
+contact.php
+
 # Dependencies
 node_modules/
 dist

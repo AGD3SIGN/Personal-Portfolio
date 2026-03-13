@@ -14,7 +14,7 @@ export function TestimonialsSection() {
 
           <div className="flex flex-col gap-10 lg:w-3/5">
             {testimonials.map((t, i) => (
-              <ScrollReveal key={i} delay={i * 100}>
+              <ScrollReveal key={t.author} delay={i * 100}>
                 <div className="border-b border-border pb-10">
                   <p className="font-body text-base leading-relaxed text-muted-foreground">
                     {`"${t.quote}"`}

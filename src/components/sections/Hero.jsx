@@ -54,6 +54,7 @@ export function Hero() {
             <img
               src={asset('/images/TherapyMockup.png')}
               alt="Safe Space therapy platform mockup showcasing frontend development work"
+              fetchpriority="high"
               className="aspect-video max-h-[500px] w-full rounded-xl object-cover"
             />
             <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-background via-transparent to-transparent" />
