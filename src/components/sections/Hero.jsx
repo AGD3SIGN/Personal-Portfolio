@@ -52,7 +52,7 @@ export function Hero() {
         <ScrollReveal delay={250}>
           <div className="relative mx-auto mt-16 max-w-5xl">
             <img
-              src={asset('/images/TherapyMockup.png')}
+              src={asset('/images/blueprint.png')}
               alt="Safe Space therapy platform mockup showcasing frontend development work"
               fetchpriority="high"
               className="aspect-video max-h-[500px] w-full rounded-xl object-cover"

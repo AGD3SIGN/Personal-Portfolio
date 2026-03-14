@@ -59,8 +59,8 @@ export function Navigation() {
       >
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 lg:px-10">
           <Link to="/" className="text-xl font-bold tracking-tight text-foreground">
-            <span className="font-light italic text-muted-foreground">show</span>
-            <span className="font-bold">casy.</span>
+            <span className="font-light italic text-muted-foreground">Torres</span>
+            <span className="font-bold">Folio.</span>
           </Link>
 
           <div className="flex items-center gap-3">
