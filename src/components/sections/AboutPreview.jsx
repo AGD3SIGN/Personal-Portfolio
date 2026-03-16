@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
@@ -5,11 +6,53 @@ import { Button } from '@/components/ui/button'
 import { asset } from '@/lib/utils'
 
 const achievements = [
-  { label: 'Years Experience', value: '5+' },
-  { label: 'Projects Delivered', value: '30+' },
-  { label: 'Happy Clients', value: '99%' },
-  { label: 'Awards Won', value: '4' },
+  { value: 10, suffix: '+', label: 'Years of Experience' },
+  { value: 15, suffix: '+', label: 'Projects Delivered' },
+  { value: 99, suffix: '+', label: 'Coffees Consumed' },
+  { value: 124879, suffix: '+', label: 'Lines of Code Written' },
 ]
+
+function StatCounter({ value, suffix, label }) {
+  const [count, setCount] = useState(0)
+  const ref = useRef(null)
+  const started = useRef(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started.current) {
+          started.current = true
+          observer.disconnect()
+          const duration = 1800
+          const startTime = performance.now()
+          const tick = (now) => {
+            const progress = Math.min((now - startTime) / duration, 1)
+            const eased = 1 - Math.pow(1 - progress, 3)
+            setCount(Math.floor(eased * value))
+            if (progress < 1) requestAnimationFrame(tick)
+            else setCount(value)
+          }
+          requestAnimationFrame(tick)
+        }
+      },
+      { threshold: 0.3 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [value])
+
+  return (
+    <div ref={ref} className="flex flex-col gap-3 border-l border-border pl-8 first:border-l-0 first:pl-0">
+      <p className="text-5xl font-bold tracking-tight text-foreground md:text-6xl">
+        {count.toLocaleString()}
+        <span className="text-primary">{suffix}</span>
+      </p>
+      <p className="font-body text-sm text-muted-foreground">{label}</p>
+    </div>
+  )
+}
 
 export function AboutPreview() {
   return (
@@ -35,7 +78,7 @@ export function AboutPreview() {
             <img
               src={asset('/images/brandon.png')}
               alt="Portrait of Brandon Torres"
-              className="size-full max-h-[620px] rounded-xl object-cover lg:col-span-2"
+              className="size-full max-h-[620px] rounded-xl object-cover object-top lg:col-span-2"
             />
             <div className="flex flex-col gap-7 md:flex-row lg:flex-col">
               {/* Breakout Card */}
@@ -68,28 +111,23 @@ export function AboutPreview() {
         </ScrollReveal>
 
         {/* Achievements */}
-        <ScrollReveal delay={160}>
-          <div className="relative mt-16 overflow-hidden rounded-xl bg-muted p-8 md:p-16">
-            <div className="flex flex-col gap-4 text-center md:text-left">
+        <div className="mt-24 border-t border-border pt-16">
+          <ScrollReveal>
+            <div className="mb-12 max-w-2xl">
               <h3 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-                What I've Built So Far
+                Part Developer, Part Caffeine Experiment
               </h3>
-              <p className="max-w-xl font-body text-sm text-muted-foreground">
-                Every project teaches me something new — here's a snapshot of where I've been and what I've built along the way.
+              <p className="mt-4 font-body text-sm leading-relaxed text-muted-foreground">
+                Still not sure which one is the dependency — the code or the caffeine.
               </p>
             </div>
-            <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 text-center lg:grid-cols-4">
-              {achievements.map((item) => (
-                <div className="flex flex-col gap-2" key={item.label}>
-                  <span className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-                    {item.value}
-                  </span>
-                  <p className="font-body text-sm text-muted-foreground">{item.label}</p>
-                </div>
-              ))}
-            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 gap-y-10 lg:grid-cols-4">
+            {achievements.map((item) => (
+              <StatCounter key={item.label} {...item} />
+            ))}
           </div>
-        </ScrollReveal>
+        </div>
       </div>
     </section>
   )

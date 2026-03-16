@@ -64,13 +64,13 @@ export function Navigation() {
           </Link>
 
           <div className="flex items-center gap-3">
-            <Link
+            {/* <Link
               to="/contact"
               className="hidden items-center gap-2 rounded-full border border-primary px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground sm:flex"
             >
               {"Let's Talk"}
               <ArrowRight className="h-4 w-4" />
-            </Link>
+            </Link> */}
 
             <button
               onClick={() => setIsOpen(true)}

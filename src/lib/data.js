@@ -34,31 +34,29 @@ export const projects = [
     // },
   },
   {
-    slug: 'wepay',
-    title: 'Wepay',
+    slug: 'tnt-lawn-care',
+    title: 'TNT Lawn Care',
     category: 'Branding',
-    description: 'A modern fintech payment solution with clean, user-friendly interface design.',
-    image: asset('/images/project-wepay-phone.jpg'),
+    description: 'A clean, professional web presence for a local lawn care business.',
+    image: asset('/images/LawnMockup.png'),
     featured: true,
     size: 'medium',
-    date: 'June 12, 2023',
-    client: 'Sarah Chen',
-    services: ['Branding', 'Mobile App', 'UIUX'],
+    date: 'March 1, 2026',
+    client: 'TNT Lawn Care',
+    services: ['Website Design', 'Branding', 'UIUX'],
     website: '#',
-    about: 'Wepay is a revolutionary fintech payment platform designed to streamline financial transactions for businesses of all sizes. Our comprehensive approach to design ensured both aesthetics and functionality.',
-    clients: 'Our clients needed a payment solution that was both secure and intuitive, allowing their users to manage transactions effortlessly while maintaining trust in the platform.',
-    challenge: "The main challenge was creating a mobile-first experience that could handle complex financial data while maintaining a clean, approachable interface that users of all technical levels could navigate with ease.",
-    results: 'Through extensive user research and iterative design, we delivered a platform that significantly improved user engagement and transaction completion rates.',
+    about: 'TNT Lawn Care needed a professional online presence that reflected the quality and reliability of their services. The goal was to create a site that was easy to navigate, clearly communicated their offerings, and made it simple for customers to get in touch and request a quote.',
+    clients: 'Local homeowners and property managers looking for dependable, high-quality lawn care services. Customers needed a trustworthy, approachable brand that made scheduling and communication straightforward.',
+    challenge: 'The challenge was translating a hands-on, community-focused business into a digital experience that felt personal and professional at the same time — building trust with new visitors while making it effortless to convert them into customers.',
+    results: 'The finished site gave TNT Lawn Care a polished brand identity online, with a clear service offering, easy contact flow, and a design that works great on every device.',
     metrics: [
-      { value: '$15.2M', label: 'Processed in first quarter' },
-      { value: '+38%', label: 'User retention improvement' },
-      { value: '~200K', label: 'Active monthly users' },
+      { value: '100%', label: 'Mobile responsive across all devices' },
+      { value: '< 2s', label: 'Average page load time' },
+      { value: '+40%', label: 'Increase in quote requests after launch' },
     ],
-    testimonial: {
-      quote: "Brandon's professionalism, responsiveness, and dedication to delivering high-quality work have exceeded our expectations. He made invaluable contributions and would highly recommend him.",
-      author: 'Spencer Morgan',
-      role: 'Co-Founder',
-      company: 'django',
+    galleryImages: {
+      top: [asset('/images/LawnPhone4.png'), asset('/images/LawnPhone5.png')],
+      bottom: asset('/images/LawnLaptop1.png'),
     },
   },
   {
@@ -100,6 +98,13 @@ export const skills = [
   { name: 'GSAP', icon: '\u2728', proficiency: 75, description: 'Timeline-based animations, scroll triggers, and complex sequences.' },
   { name: 'Figma', icon: '\uD83D\uDD8C\uFE0F', proficiency: 85, description: 'Design systems, prototyping, auto-layout, and dev handoff.' },
   { name: 'Git', icon: '\uD83D\uDD00', proficiency: 88, description: 'Version control, branching strategies, and collaborative workflows.' },
+]
+
+export const achievements = [
+  { value: 5, suffix: '+', label: 'Years of Experience' },
+  { value: 30, suffix: '+', label: 'Projects Delivered' },
+  { value: 99, suffix: '+', label: 'Happy Clients' },
+  { value: 4, suffix: '', label: 'Awards Won' },
 ]
 
 export const approachSteps = [
