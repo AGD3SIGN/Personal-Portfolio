@@ -7,18 +7,18 @@ function TimelineStep({ step, index }) {
   const isEven = index % 2 === 0
 
   return (
-    <div className="relative grid grid-cols-[1fr] md:grid-cols-[1fr_auto_1fr] md:gap-x-10">
-      {/* Left column */}
+    <div className="relative grid grid-cols-[auto_1fr] gap-x-8 md:grid-cols-[1fr_auto_1fr] md:gap-x-10">
+      {/* Left column — desktop only */}
       <div className="hidden md:col-start-1 md:block">
-        {isEven ? (
+        {isEven && (
           <ScrollReveal delay={100}>
             <StepContent step={step} align="right" />
           </ScrollReveal>
-        ) : null}
+        )}
       </div>
 
-      {/* Center line node */}
-      <div className="absolute left-0 top-0 flex flex-col items-center md:relative md:col-start-2 md:left-auto">
+      {/* Center node */}
+      <div className="flex flex-col items-center md:col-start-2">
         <ScrollReveal delay={50}>
           <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary bg-background text-sm font-bold text-primary shadow-sm shadow-primary/10">
             {step.number}
@@ -29,17 +29,17 @@ function TimelineStep({ step, index }) {
         )}
       </div>
 
-      {/* Right column */}
+      {/* Right column — desktop only */}
       <div className="hidden md:col-start-3 md:block">
-        {!isEven ? (
+        {!isEven && (
           <ScrollReveal delay={100}>
             <StepContent step={step} align="left" />
           </ScrollReveal>
-        ) : null}
+        )}
       </div>
 
-      {/* Mobile content (always to the right of the line) */}
-      <div className="pb-12 pl-16 md:hidden">
+      {/* Mobile — always right of the line */}
+      <div className="pb-12 md:hidden">
         <ScrollReveal delay={100}>
           <StepContent step={step} align="left" />
         </ScrollReveal>
@@ -48,29 +48,23 @@ function TimelineStep({ step, index }) {
   )
 }
 
-function StepContent({ step, align }) {
+function StepContent({ step, align = 'left' }) {
+  const isRight = align === 'right'
   return (
-    <div className={`pb-12 ${align === 'right' ? 'text-right' : 'text-left'}`}>
+    <div className={`pb-12 ${isRight ? 'text-right' : 'text-left'}`}>
       <p className="text-xs font-bold uppercase tracking-wider text-primary">
         Step {step.number}
       </p>
       <h3 className="mt-2 text-xl font-bold tracking-tight text-foreground md:text-2xl">
         {step.title}
       </h3>
-      <p className="mt-3 font-body text-sm leading-relaxed text-muted-foreground">
+      <p className="mt-3 font-body text-base leading-relaxed text-muted-foreground">
         {step.description}
       </p>
-      <ul
-        className={`mt-4 flex flex-col gap-2 ${align === 'right' ? 'items-end' : 'items-start'
-          }`}
-      >
-        {step.details.map((detail, i) => (
-          <li
-            key={detail}
-            className={`flex items-start gap-2.5 font-body text-xs leading-relaxed text-muted-foreground ${align === 'right' ? 'flex-row-reverse text-right' : ''
-              }`}
-          >
-            <span className="mt-1 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+      <ul className={`mt-4 flex flex-col gap-2 ${isRight ? 'items-end' : 'items-start'}`}>
+        {step.details.map((detail) => (
+          <li key={detail} className={`flex items-start gap-2.5 font-body text-sm leading-relaxed text-muted-foreground ${isRight ? 'flex-row-reverse' : ''}`}>
+            <span className="mt-1.5 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
             {detail}
           </li>
         ))}

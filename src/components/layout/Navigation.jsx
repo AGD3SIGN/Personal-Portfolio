@@ -9,12 +9,10 @@ const navItems = [
   { label: 'Contact', href: '/contact', number: '04' },
 ]
 
-// TODO: Add your real social links here
 const socialLinks = [
-  // { label: 'INSTAGRAM', href: 'https://instagram.com/yourusername' },
-  // { label: 'BEHANCE', href: 'https://behance.net/yourusername' },
-  // { label: 'TWITTER', href: 'https://twitter.com/yourusername' },
-  // { label: 'DRIBBBLE', href: 'https://dribbble.com/yourusername' },
+  { label: 'INSTAGRAM', href: 'https://instagram.com/agd3sign' },
+  { label: 'YOUTUBE', href: 'https://www.youtube.com/@agdesign9920' },
+  { label: 'GITHUB', href: 'https://github.com/AGD3SIGN' },
 ]
 
 export function Navigation() {

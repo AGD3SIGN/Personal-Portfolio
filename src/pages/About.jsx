@@ -5,7 +5,7 @@ import { Footer } from '@/components/layout/Footer'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { ApproachSection } from '@/components/sections/ApproachSection'
 import { SkillsMarquee as SkillsSection } from '@/components/sections/SkillsMarquee'
-import { experience, clients, awards } from '@/lib/data'
+import { experience, education, clients, awards } from '@/lib/data'
 import { asset } from '@/lib/utils'
 
 export default function About() {
@@ -30,7 +30,7 @@ export default function About() {
 
           <ScrollReveal delay={100}>
             <p className="mx-auto mt-8 max-w-2xl font-body text-base leading-relaxed text-muted-foreground">
-              With a background rooted in web design and development, I've built up 5+ years of experience that shape the way I approach every project — creating websites that feel right on every screen, for every person using them.
+              With a background rooted in web design and development, I've built up 10+ years of experience that shape the way I approach every project — creating websites that feel right on every screen, for every person using them.
             </p>
           </ScrollReveal>
         </div>
@@ -63,7 +63,7 @@ export default function About() {
           <ScrollReveal delay={100}>
             <div className="mt-10 grid gap-8 md:grid-cols-2">
               <p className="font-body text-base leading-relaxed text-muted-foreground">
-                I work closely with the people I build for — taking time to understand what your business actually needs before writing a single line of code. Every decision, from layout to functionality, is made with your goals and your customers in mind.
+                I will work closely with my clients — taking time to understand what their business actually needs before writing a single line of code. Every decision, from layout to functionality, is made with their goals and their customers in mind.
               </p>
               <p className="font-body text-base leading-relaxed text-muted-foreground">
                 When I'm not building, I'm staying busy — Outside of work, life is full and I wouldn't have it any other way. I'm a husband to my beautiful wife and dad to 5 kids — plus two dogs and a cat who keep things interesting. Most evenings you'll find me surrounded by noise, laughter, and probably someone asking for a snack. It's chaos, but it's my favorite kind.
@@ -77,29 +77,68 @@ export default function About() {
 
       <SkillsSection />
 
-      {/* Experience */}
+      {/* Education & Experience */}
       <section className="px-6 py-28 lg:px-10 lg:py-36">
         <div className="mx-auto max-w-[900px]">
-          <ScrollReveal>
-            <h2 className="mb-12 text-3xl font-bold tracking-tight text-foreground">
-              Experience
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={80}>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-              {experience.map((exp) => (
-                <div key={exp.period} className="border-t border-border pt-6">
-                  <p className="font-body text-xs text-muted-foreground">{exp.period}</p>
-                  <p className="mt-3 text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-                    {exp.duration}
-                  </p>
-                  <p className="mt-2 font-body text-sm text-muted-foreground">
-                    {exp.role}
-                  </p>
+          <div className="grid gap-16 md:grid-cols-2 md:gap-12">
+
+            {/* Experience */}
+            <div>
+              <ScrollReveal>
+                <div className="mb-10 flex items-center gap-3">
+                  <span className="h-px flex-1 bg-border" />
+                  <h2 className="text-xs font-bold uppercase tracking-widest text-primary">Experience</h2>
                 </div>
-              ))}
+              </ScrollReveal>
+              <ScrollReveal delay={80}>
+                <div className="flex flex-col">
+                  {experience.map((exp, i) => (
+                    <div key={exp.period} className={`group relative py-8 ${i !== 0 ? 'border-t border-border' : ''}`}>
+                      <div className="absolute left-0 top-0 h-0 w-0.5 bg-primary transition-all duration-500 group-hover:h-full" />
+                      <div className="pl-5">
+                        <p className="font-body text-xs font-medium uppercase tracking-widest text-primary">
+                          {exp.period}
+                        </p>
+                        <p className="mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+                          {exp.duration}
+                        </p>
+                        <p className="mt-2 font-body text-sm text-muted-foreground">{exp.role}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
             </div>
-          </ScrollReveal>
+
+            {/* Education */}
+            <div>
+              <ScrollReveal>
+                <div className="mb-10 flex items-center gap-3">
+                  <span className="h-px flex-1 bg-border" />
+                  <h2 className="text-xs font-bold uppercase tracking-widest text-primary">Education</h2>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal delay={80}>
+                <div className="flex flex-col">
+                  {education.map((edu, i) => (
+                    <div key={edu.period} className={`group relative py-8 ${i !== 0 ? 'border-t border-border' : ''}`}>
+                      <div className="absolute left-0 top-0 h-0 w-0.5 bg-primary transition-all duration-500 group-hover:h-full" />
+                      <div className="pl-5">
+                        <p className="font-body text-xs font-medium uppercase tracking-widest text-primary">
+                          {edu.period}
+                        </p>
+                        <p className="mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+                          {edu.degree}
+                        </p>
+                        <p className="mt-2 font-body text-sm text-muted-foreground">{edu.school}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
+            </div>
+
+          </div>
         </div>
       </section>
 

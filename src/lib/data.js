@@ -100,13 +100,6 @@ export const skills = [
   { name: 'Git', icon: '\uD83D\uDD00', proficiency: 88, description: 'Version control, branching strategies, and collaborative workflows.' },
 ]
 
-export const achievements = [
-  { value: 5, suffix: '+', label: 'Years of Experience' },
-  { value: 30, suffix: '+', label: 'Projects Delivered' },
-  { value: 99, suffix: '+', label: 'Happy Clients' },
-  { value: 4, suffix: '', label: 'Awards Won' },
-]
-
 export const approachSteps = [
   {
     number: '01',
@@ -212,9 +205,13 @@ export const awards = [
 ]
 
 export const experience = [
-  { period: '2013-2015', duration: '2 years', role: 'as a Product Designer at Uber' },
-  { period: '2015-2018', duration: '3 years', role: 'as a Lead of Product Designer at Spotify' },
-  { period: '2018-Now', duration: '5+ years', role: 'as a Head of Product Designer at Rovio' },
+  { period: '2011–2019', duration: '8 years', role: 'IT Tech at Bryant Public Schools' },
+  { period: '2022–Present', duration: '3+ years', role: 'IT Support Technician at OrthoArkansas' },
+]
+
+export const education = [
+  { period: '2006–2010', degree: 'High School Diploma', school: 'Bryant High School' },
+  { period: 'Graduated May 2024', degree: 'B.S. Web Development', school: 'Arkansas State University' },
 ]
 
 export const blogPosts = [
