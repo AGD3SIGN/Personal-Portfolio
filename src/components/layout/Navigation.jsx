@@ -102,8 +102,8 @@ export function Navigation() {
               onClick={() => setIsOpen(false)}
               className="text-xl font-bold tracking-tight text-foreground"
             >
-              <span className="font-light italic text-muted-foreground">show</span>
-              <span className="font-bold">casy.</span>
+              <span className="font-light italic text-muted-foreground">Torres</span>
+              <span className="font-bold">Folio.</span>
             </Link>
             <button
               onClick={() => setIsOpen(false)}

@@ -6,7 +6,7 @@ import { AboutPreview } from '@/components/sections/AboutPreview'
 import { FeaturedProjects } from '@/components/sections/FeaturedProjects'
 import { ClientsSection } from '@/components/sections/ClientsSection'
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
-import { AwardsSection } from '@/components/sections/AwardsSection'
+import { FAQSection } from '@/components/sections/FAQSection'
 import { InsightsSection } from '@/components/sections/InsightsSection'
 
 export default function Home() {
@@ -21,10 +21,10 @@ export default function Home() {
       <Hero />
       <AboutPreview />
       <FeaturedProjects />
-      <ClientsSection />
       <TestimonialsSection />
-      <AwardsSection />
-      <InsightsSection />
+      {/* <ClientsSection /> */}
+      <FAQSection />
+      {/* <InsightsSection /> */}
       <Footer />
     </main>
   )

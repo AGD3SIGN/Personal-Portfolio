@@ -5,8 +5,10 @@ import { Footer } from '@/components/layout/Footer'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { ApproachSection } from '@/components/sections/ApproachSection'
 import { SkillsMarquee as SkillsSection } from '@/components/sections/SkillsMarquee'
-import { experience, education, clients, awards } from '@/lib/data'
+import { AwardsSection } from '@/components/sections/AwardsSection'
+import { experience, education, clients } from '@/lib/data'
 import { asset } from '@/lib/utils'
+
 
 export default function About() {
   return (
@@ -176,54 +178,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Award Feature */}
-      <section className="px-6 py-28 lg:px-10 lg:py-36">
-        <div className="mx-auto max-w-[900px]">
-          <ScrollReveal>
-            <div className="flex flex-col gap-10 md:flex-row md:items-center md:gap-14">
-              <div className="relative aspect-square w-full max-w-[280px] overflow-hidden rounded-2xl bg-secondary">
-                <img
-                  src={asset('/images/award-trophy.jpg')}
-                  alt="Design award trophy"
-                  className="absolute inset-0 h-full w-full object-cover"
-                  loading="lazy"
-                  onError={(e) => { e.target.src = asset('/images/placeholder.svg') }}
-                />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">
-                  Awwwards Winning - Independent of The Year
-                </h2>
-                <p className="mt-3 font-body text-sm text-muted-foreground">
-                  Brandon Torres - 2022
-                </p>
-                <button className="mt-6 flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-primary hover:text-primary-foreground">
-                  <ArrowUpRight className="h-4 w-4" />
-                </button>
-
-                <div className="mt-10">
-                  {awards.map((award) => (
-                    <div
-                      key={`${award.title}-${award.year}`}
-                      className="group flex cursor-pointer items-center justify-between border-b border-border py-5 transition-colors hover:bg-secondary/30"
-                    >
-                      <div>
-                        <h3 className="text-sm font-semibold text-foreground">
-                          {award.title}
-                        </h3>
-                        <p className="font-body text-xs text-muted-foreground">
-                          {award.year} - {award.org}
-                        </p>
-                      </div>
-                      <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground opacity-0 transition-all group-hover:opacity-100 group-hover:text-primary" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <AwardsSection />
 
       <Footer />
     </main>

@@ -1,49 +1,37 @@
-import { ArrowUpRight } from 'lucide-react'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
-import { awards } from '@/lib/data'
-import { asset } from '@/lib/utils'
 
 export function AwardsSection() {
   return (
     <section className="px-6 py-28 lg:px-10 lg:py-36">
       <div className="mx-auto max-w-[1400px]">
-        <div className="flex flex-col gap-10 lg:flex-row lg:gap-16">
-          <ScrollReveal className="lg:w-2/5">
-            <div className="relative aspect-square max-w-xs overflow-hidden rounded-2xl bg-secondary">
-              <img
-                src={asset('/images/award-trophy.jpg')}
-                alt="Design award trophy"
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
-                onError={(e) => { e.target.src = asset('/images/placeholder.svg') }}
-              />
-            </div>
-            <h2 className="mt-6 text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">
-              Awwwards Winning - Independent of The Year
-            </h2>
-            <p className="mt-2 font-body text-sm text-muted-foreground">
-              Brandon Torres - 2022
-            </p>
-          </ScrollReveal>
+        <ScrollReveal>
+          <div className="relative overflow-hidden rounded-3xl bg-secondary px-8 py-16 md:px-16 md:py-24">
 
-          <div className="flex flex-1 flex-col justify-end lg:w-3/5">
-            {awards.map((award, i) => (
-              <ScrollReveal key={`${award.title}-${award.year}`} delay={i * 80}>
-                <div className="group flex cursor-pointer items-center justify-between border-b border-border py-5 transition-colors hover:bg-secondary/50">
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground">
-                      {award.title}
-                    </h3>
-                    <p className="mt-1 font-body text-xs text-muted-foreground">
-                      {award.year} - {award.org}
-                    </p>
-                  </div>
-                  <ArrowUpRight className="h-4 w-4 text-muted-foreground opacity-0 transition-all group-hover:opacity-100 group-hover:text-primary" />
-                </div>
-              </ScrollReveal>
-            ))}
+            {/* Decorative oversized quote mark */}
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -top-6 left-8 select-none text-[12rem] font-bold leading-none text-primary/10 md:text-[18rem]"
+            >
+              &ldquo;
+            </span>
+
+            <div className="relative">
+              <p className="max-w-5xl text-3xl font-bold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
+                A man who stands for{' '}
+                <span className="italic text-primary">nothing</span>{' '}
+                will fall for anything.
+              </p>
+
+              <div className="mt-10 flex items-center gap-4">
+                <span className="h-px w-12 bg-primary" />
+                <p className="font-body text-sm font-medium uppercase tracking-widest text-muted-foreground">
+                  Malcolm X
+                </p>
+              </div>
+            </div>
+
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   )
