@@ -58,6 +58,15 @@
       })(window,document,"clarity","script","ryi97n2xhu");
     </script>
   </head>
+  <script>
+    (function() {
+      const stored = localStorage.getItem('theme')
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+      if (stored === 'dark' || (!stored && prefersDark)) {
+        document.documentElement.classList.add('dark')
+      }
+    })()
+  </script>
   <body class="font-sans antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

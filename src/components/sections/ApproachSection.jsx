@@ -1,7 +1,17 @@
 import { useRef } from 'react'
 import { motion, useScroll, useSpring } from 'motion/react'
+import { MessageCircle, Search, PenTool, Code2, FlaskConical, Rocket } from 'lucide-react'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
 import { approachSteps } from '@/lib/data'
+
+const stepIcons = {
+  '01': MessageCircle,
+  '02': Search,
+  '03': PenTool,
+  '04': Code2,
+  '05': FlaskConical,
+  '06': Rocket,
+}
 
 function TimelineStep({ step, index }) {
   const isEven = index % 2 === 0
@@ -20,8 +30,8 @@ function TimelineStep({ step, index }) {
       {/* Center node */}
       <div className="flex flex-col items-center md:col-start-2">
         <ScrollReveal delay={50}>
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary bg-background text-sm font-bold text-primary shadow-sm shadow-primary/10">
-            {step.number}
+          <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary bg-background text-primary shadow-sm shadow-primary/10">
+            {stepIcons[step.number] && (() => { const Icon = stepIcons[step.number]; return <Icon className="h-5 w-5" /> })()}
           </div>
         </ScrollReveal>
         {index < approachSteps.length - 1 && (

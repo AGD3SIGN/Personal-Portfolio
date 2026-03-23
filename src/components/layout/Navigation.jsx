@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, ArrowUpRight, X } from 'lucide-react'
+import { ToggleTheme } from '@/components/ui/toggle-theme'
 
 const navItems = [
   { label: 'Home', href: '/', number: '01' },
@@ -62,13 +63,7 @@ export function Navigation() {
           </Link>
 
           <div className="flex items-center gap-3">
-            {/* <Link
-              to="/contact"
-              className="hidden items-center gap-2 rounded-full border border-primary px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground sm:flex"
-            >
-              {"Let's Talk"}
-              <ArrowRight className="h-4 w-4" />
-            </Link> */}
+            <ToggleTheme animationType="circle-spread" className="text-foreground" />
 
             <button
               onClick={() => setIsOpen(true)}

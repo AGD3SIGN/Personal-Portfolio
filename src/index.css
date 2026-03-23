@@ -35,8 +35,7 @@
     --scrollbar-thumb: 220 10% 78%;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
+  .dark {
       /* Dark theme */
       --background: 225 12% 8%;
       --foreground: 0 0% 95%;
@@ -59,7 +58,6 @@
       --ring: 59 93% 60%;
       --scrollbar-track: 225 12% 8%;
       --scrollbar-thumb: 225 8% 24%;
-    }
   }
 }
 
