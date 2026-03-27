@@ -9,9 +9,7 @@ const services = [
   'Website Design',
   'Branding',
   'Web Development',
-  'Illustration',
   'Logo Design',
-  'Graphic Design',
 ]
 
 const budgetRanges = [
@@ -97,14 +95,14 @@ export default function Contact() {
         <div className="mx-auto max-w-[1400px]">
           <ScrollReveal>
             <h1 className="mx-auto max-w-4xl text-balance text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-[88px]">
-              <span className="font-light italic text-primary">Say Hi! </span>
-              and tell me about your idea
+              <span className="font-light italic text-primary">Say hi </span>
+              — and tell me what you&apos;re building
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
             <p className="mx-auto mt-6 max-w-md font-body text-base text-muted-foreground">
-              Have a project in mind? Reach out and let&apos;s chat.
+              Fill out the form below and I&apos;ll follow up within 1–2 business days.
             </p>
           </ScrollReveal>
         </div>
@@ -178,7 +176,7 @@ export default function Contact() {
               <ScrollReveal delay={150}>
                 <div>
                   <label className="text-sm font-semibold text-foreground">
-                    {"What's in your mind?"}
+                    {"Services you need"}
                   </label>
                   <div className="mt-4 flex flex-wrap gap-2.5">
                     {services.map((service) => (
@@ -202,7 +200,7 @@ export default function Contact() {
               <ScrollReveal delay={200}>
                 <div>
                   <label className="text-sm font-semibold text-foreground">
-                    How much is your budget range?
+                    What&apos;s your budget range?
                   </label>
                   <div className="mt-4 flex flex-wrap gap-2.5">
                     {budgetRanges.map((range) => (
@@ -245,13 +243,13 @@ export default function Contact() {
                     disabled={status === 'loading'}
                     className="rounded-full bg-primary px-12 py-4 text-base font-medium text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {status === 'loading' ? 'Sending...' : 'Submit'}
+                    {status === 'loading' ? 'Sending...' : 'Send My Message'}
                   </button>
                   {status === 'error' && (
                     <p className="font-body text-sm text-red-500">
                       Something went wrong. Please try again or email me directly at{' '}
-                      <a href="mailto:brandon.agdesign@gmail.com" className="underline">
-                        brandon.agdesign@gmail.com
+                      <a href="mailto:hello@brandonjosephtorres.com" className="underline">
+                        hello@brandonjosephtorres.com
                       </a>
                     </p>
                   )}

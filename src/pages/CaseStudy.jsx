@@ -104,7 +104,7 @@ export default function CaseStudy() {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="mt-14 text-3xl font-bold tracking-tight text-foreground">Our Clients</h2>
+                <h2 className="mt-14 text-3xl font-bold tracking-tight text-foreground">Who It&apos;s For</h2>
                 <p className="mt-4 font-body text-base leading-relaxed text-muted-foreground">
                   {project.clients}
                 </p>

@@ -12,7 +12,7 @@ export function FeaturedProjects() {
       <div className="mx-auto max-w-[1400px]">
         <ScrollReveal>
           <h2 className="mb-14 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
-            Discover my latest works
+            Here&apos;s what I&apos;ve been working on
           </h2>
         </ScrollReveal>
 

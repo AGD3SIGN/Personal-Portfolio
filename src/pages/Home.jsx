@@ -14,14 +14,14 @@ export default function Home() {
     <main>
       <Helmet>
         <title>Brandon Torres | Frontend Developer Portfolio</title>
-        <meta name="description" content="Frontend developer based in Saline County with 5+ years of experience creating intuitive, user-friendly websites and applications. Available for freelance." />
+        <meta name="description" content="Frontend developer based in Saline County building fast, responsive websites for small businesses and startups. Available for freelance." />
         <link rel="canonical" href="https://www.brandonjosephtorres.com/" />
       </Helmet>
       <Navigation />
       <Hero />
       <AboutPreview />
       <FeaturedProjects />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       {/* <ClientsSection /> */}
       <FAQSection />
       {/* <InsightsSection /> */}

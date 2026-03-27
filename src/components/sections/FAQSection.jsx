@@ -3,32 +3,44 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/
 
 const faqs = [
   {
-    question: "What does your process look like from start to finish?",
-    answer: "Every project starts with a conversation — no forms, no intake questionnaires. We talk through your goals, I ask the right questions, and from there I handle research, wireframes, design, and development. You're involved at every key stage, but I do the heavy lifting so you don't have to.",
+    question: "How do we get started?",
+    answer: "Reach out with a brief overview of your project — what you're building, your timeline, and any reference sites you like. From there, we'll schedule a quick call to make sure we're a good fit before anything is formalized.",
   },
   {
-    question: "How long does a typical project take?",
-    answer: "Most websites land between 4 and 8 weeks depending on scope. A straightforward branding site is on the shorter end; something with custom functionality or a lot of pages will take longer. I'll give you a realistic timeline before anything starts — and I stick to it.",
+    question: "Do you use AI to build my site?",
+    answer: "Yes — Since AI is becoming a big part of technology, I like to keep myself up-to-date. AI is part of my workflow for research, design ideation, and development, but it's a tool — not a replacement developer. Every decision is intentional, every line of code is reviewed, and the end result is built around your specific goals. It means faster turnaround without cutting corners on quality.",
   },
   {
-    question: "What do you charge?",
-    answer: "Pricing depends on what you need. I don't do one-size-fits-all packages because every project is different. What I can tell you is there are no hidden fees — you'll know exactly what you're paying for before we shake hands.",
+    question: "How do you handle revisions?",
+    answer: "Every project includes a set number of revision rounds built into the scope. Anything beyond that is billed at an agreed hourly rate — no surprises.",
   },
   {
-    question: "Do you only do design, or development too?",
-    answer: "Both. I handle the full stack from Figma mockups through to production-ready React code. You won't need to hire a separate developer to build what I design — it all comes from one person.",
+    question: "Are you available right now, or is there a waitlist?",
+    answer: "Yes, I am currently available! Availability will shift depending on active projects. The best way to find out is to reach out directly. If there's a wait, I'll give you an estimated start date so you can plan accordingly.",
+  },
+  {
+    question: "Can you work within a tight deadline?",
+    answer: "Ideally, no — the best work takes time, and rushing rarely does either of us any favors. That said, rush timelines are possible depending on scope and may come with adjusted pricing. The earlier you reach out, the more flexibility we have.",
   },
   {
     question: "Will my site work on mobile?",
-    answer: "Every site I build is fully responsive by default — it's not an add-on. I test across phones, tablets, and desktops before anything goes live, so your visitors get a consistent experience no matter what device they're on.",
+    answer: "Every site I build is fully responsive by default — it's not an add-on. I test across phones, tablets, and desktops before anything goes live so your visitors get a consistent experience no matter what device they're on.",
   },
   {
     question: "Who hosts the site after it's built?",
-    answer: "I host on my own managed servers, which means if something ever goes wrong you're talking to me directly — not a support ticket system. I also include 30 days of post-launch support at no extra charge, plus optional maintenance plans if you want ongoing help.",
+    answer: "I host on my own managed servers. If something ever goes wrong, you're talking to me directly — not a support ticket queue.",
   },
   {
-    question: "Do I own the code?",
-    answer: "Yes, 100%. Once the project is paid for, the code is yours. No licensing fees, no lock-in. You can take it anywhere.",
+    question: "What's included in the quoted price?",
+    answer: "The quote covers everything in the agreed scope — design, development, and a set number of revisions. Anything added after scope is locked is handled as a change order.",
+  },
+  {
+    question: "Are there ongoing costs after launch?",
+    answer: "It depends on your setup. Hosting, domain renewal, and any third-party tools are separate costs. Ongoing maintenance and support are available as an add-on if you need them.",
+  },
+  {
+    question: "Will I be able to update the site myself?",
+    answer: "Yes. If self-editing matters to you, we'll build with that in mind from the start. Before handoff, I'll walk you through how to make common updates on your own.",
   },
 ]
 

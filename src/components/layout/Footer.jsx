@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
+
 
 const socialLinks = [
   {
@@ -32,31 +33,37 @@ const socialLinks = [
 ]
 
 export function Footer() {
+  const { pathname } = useLocation()
+  const isContact = pathname === '/contact'
+
   return (
     <footer className="bg-secondary">
       <div className="px-6 pb-10 pt-20 lg:px-10">
         <div className="mx-auto max-w-[1400px]">
 
-          {/* Headline row */}
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
-            <h2 className="text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-8xl">
-              Ready to build<br />
-              something{' '}
-              <span className="font-bold italic text-primary">great?</span>
-            </h2>
+          {!isContact && (
+            <>
+              {/* Headline row */}
+              <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+                <h2 className="text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-8xl">
+                  Ready to build<br />
+                  something{' '}
+                  <span className="font-bold italic text-primary">great?</span>
+                </h2>
+              </div>
 
-          </div>
-
-          {/* CTA button */}
-          <div className="mt-10">
-            <a
-              href="mailto:hello@brandonjosephtorres.com"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20"
-            >
-              {"Let's Talk"}
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
+              {/* CTA button */}
+              <div className="mt-10">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20"
+                >
+                  {"Let's Talk"}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </>
+          )}
 
           {/* Divider */}
           <div className="mt-20 border-t border-border" />

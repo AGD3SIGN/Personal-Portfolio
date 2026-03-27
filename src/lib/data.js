@@ -44,8 +44,8 @@ export const projects = [
     client: 'TNT Lawn Care',
     services: ['Website Design', 'Branding', 'UIUX'],
     website: 'https://www.tnt-lawns.com',
-    about: 'TNT Lawn Care site revamp project was a change to their professional online presence that reflected the quality and reliability of their services. The goal was to create a site that was easy to navigate, clearly communicated their offerings, and made it simple for customers to get in touch and request a quote.',
-    clients: 'Local homeowners in Saline County looking for dependable, high-quality lawn care services. Customers need a trustworthy, approachable brand that made scheduling and communication straightforward.',
+    about: 'The TNT Lawn Care site revamp was a chance to build a professional online presence that reflected the quality and reliability of their services. The goal was to create a site that was easy to navigate, clearly communicated their offerings, and made it simple for customers to get in touch and request a quote.',
+    clients: 'Local homeowners in Saline County looking for dependable, high-quality lawn care services. Customers need a trustworthy, approachable brand that makes scheduling and communication straightforward.',
     challenge: 'The challenge was translating a hands-on, community-focused business into a digital experience that felt personal and professional at the same time — building trust with new visitors while making it effortless to convert them into customers.',
     results: 'The finished site gave TNT Lawn Care a polished brand identity online, with a clear service offering, easy contact flow, and a design that works great on every device.',
     metrics: [
@@ -70,14 +70,14 @@ export const projects = [
     client: 'Michael Rivera',
     services: ['Mobile App', 'UIUX'],
     website: '#',
-    about: 'Payrole is a next-generation payroll management application that simplifies employee payment processing and tax calculations for small to medium businesses.',
+    about: 'Payrole is a payroll management application that simplifies employee payment processing and tax calculations for small to medium businesses.',
     clients: 'Small and medium business owners who needed a straightforward payroll solution that could scale with their growing teams.',
     challenge: 'Designing an interface that could accommodate complex payroll calculations while keeping the experience simple and stress-free for business owners.',
-    results: 'We delivered a streamlined payroll experience that reduced processing time by 60% and eliminated common calculation errors.',
+    results: 'The result was a streamlined payroll experience that reduced processing time by 60% and eliminated common calculation errors.',
     metrics: [
       { value: '60%', label: 'Reduction in processing time' },
       { value: '+45%', label: 'Increase in user satisfaction' },
-      { value: '~100K', label: 'Businesses served globally' },
+      { value: '3', label: 'Core user flows redesigned' },
     ],
     testimonial: {
       quote: 'Brandon is an exceptionally talented developer who consistently exceeded our expectations. His ability to blend creativity and functionality resulted in visually stunning designs.',
@@ -106,34 +106,34 @@ export const approachSteps = [
     description: "We start with a conversation — no forms, no pressure. I learn what you need, you learn how I work, and we decide together if it's a good fit.",
     details: [
       'Free consultation — no obligation',
-      'Defined scope, timeline, and flat-rate pricing before anything starts',
+      'Flat-rate pricing locked in before anything starts',
       'You sign off on the project brief before we move forward',
     ],
   },
   {
     number: '02',
-    title: 'Research & Strategy',
-    description: "I study your industry, your competitors, and your audience so every decision we make has a reason behind it — not just a gut feeling.",
+    title: 'Research & Inspiration',
+    description: "I gather design references and explore ideas across the web — using every tool available, including AI, to find what resonates before any decisions are made.",
     details: [
-      'Competitor and market analysis',
-      'Audience research to guide design and messaging',
+      'Design research and reference gathering',
+      'AI-assisted ideation to explore more directions, faster',
       'Tech stack recommendation based on your goals and budget',
     ],
   },
   {
     number: '03',
     title: 'Design & Prototyping',
-    description: "You see exactly what you're getting before a single line of code is written. Wireframes and interactive mockups first — no surprises later.",
+    description: "You see exactly what you're getting before a single line of code is written. AI helps accelerate the process — the decisions and direction are still mine.",
     details: [
       'Clickable prototypes you can review and share',
-      'Two revision rounds per stage — we get it right',
+      'Two revision rounds per stage — we get it right before moving on',
       'Full design approval before development begins',
     ],
   },
   {
     number: '04',
     title: 'Development',
-    description: "Clean, fast, fully responsive code built to match the approved design exactly. You get live preview links throughout so you can follow along.",
+    description: "Clean, fast, fully responsive code built to match the approved design exactly. I use AI as a development tool to work efficiently — every line is reviewed and intentional.",
     details: [
       'Built with modern frameworks — React, Tailwind, and more',
       'Responsive across all screen sizes and browsers',
@@ -153,7 +153,7 @@ export const approachSteps = [
   {
     number: '06',
     title: 'Deployment & Maintenance',
-    description: "I handle the launch and stay available after. If something comes up, you reach me directly — not a support queue.",
+    description: "I handle the launch and stay available after. If something comes up, you reach me directly — not a support ticket queue.",
     details: [
       'Hosted on my managed servers — direct line to me if anything breaks',
       '30-day post-launch support included, no extra charge',
@@ -163,10 +163,10 @@ export const approachSteps = [
 ]
 
 export const clients = [
-  { name: 'pipefy', label: 'Pipefy.io', date: 'May 5, 2023' },
-  { name: 'django', label: 'Django', date: 'May 5, 2023' },
-  { name: 'rackspace', label: 'Rackspace', date: 'May 5, 2023' },
-  { name: 'portal', label: 'Portal', date: 'May 5, 2023' },
+  { name: 'pipefy', label: 'Pipefy.io', date: 'March 2023' },
+  { name: 'django', label: 'Django', date: 'June 2023' },
+  { name: 'rackspace', label: 'Rackspace', date: 'October 2022' },
+  { name: 'portal', label: 'Portal', date: 'January 2024' },
 ]
 
 export const testimonials = [

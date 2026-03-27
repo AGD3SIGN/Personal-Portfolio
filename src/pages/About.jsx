@@ -15,7 +15,7 @@ export default function About() {
     <main>
       <Helmet>
         <title>About | Brandon Torres - Frontend Developer</title>
-        <meta name="description" content="Learn about Brandon Torres, a frontend developer with 5+ years of experience building intuitive websites and applications. Explore my skills, approach, and experience." />
+        <meta name="description" content="Learn about Brandon Torres, a frontend developer building fast, responsive websites for small businesses. Explore my skills, approach, and experience." />
         <link rel="canonical" href="https://www.brandonjosephtorres.com/about" />
       </Helmet>
       <Navigation />
@@ -26,13 +26,13 @@ export default function About() {
           <ScrollReveal>
             <h1 className="mx-auto max-w-4xl text-balance text-4xl font-bold leading-[1.1] tracking-tight text-foreground md:text-6xl lg:text-7xl">
               <span className="font-light italic text-primary">About me, </span>
-              a Frontend Developer living in Saline County.
+              a Frontend Developer based in Saline County.
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
             <p className="mx-auto mt-8 max-w-2xl font-body text-base leading-relaxed text-muted-foreground">
-              With a background rooted in web design and development, I've built up 10+ years of experience that shape the way I approach every project — creating websites that feel right on every screen, for every person using them.
+              With a background rooted in web design and development, I've built up 10+ years of experience that shapes the way I approach every project — creating websites that feel right on every screen, for every person using them.
             </p>
           </ScrollReveal>
         </div>
@@ -65,7 +65,7 @@ export default function About() {
           <ScrollReveal delay={100}>
             <div className="mt-10 grid gap-8 md:grid-cols-2">
               <p className="font-body text-base leading-relaxed text-muted-foreground">
-                I will work closely with my clients — taking time to understand what their business actually needs before writing a single line of code. Every decision, from layout to functionality, is made with their goals and their customers in mind.
+                I work closely with my clients — taking time to understand what their business actually needs before writing a single line of code. Every decision, from layout to how something functions, is made with your goals and your customers in mind.
               </p>
               <p className="font-body text-base leading-relaxed text-muted-foreground">
                 When I'm not building, I'm staying busy — Outside of work, life is full and I wouldn't have it any other way. I'm a husband to my beautiful wife and dad to 5 kids — plus two dogs and a cat who keep things interesting. Most evenings you'll find me surrounded by noise, laughter, and probably someone asking for a snack. It's chaos, but it's my favorite kind.

@@ -17,8 +17,8 @@
     --card-foreground: 225 15% 12%;
     --popover: 0 0% 100%;
     --popover-foreground: 225 15% 12%;
-    --primary: 59 93% 45%;
-    --primary-foreground: 225 15% 8%;
+    --primary: 214 92% 61%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 220 10% 92%;
     --secondary-foreground: 225 15% 12%;
     --muted: 220 10% 90%;
@@ -29,7 +29,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 220 10% 85%;
     --input: 220 10% 85%;
-    --ring: 59 93% 45%;
+    --ring: 214 92% 61%;
     --radius: 0.5rem;
     --scrollbar-track: 0 0% 97%;
     --scrollbar-thumb: 220 10% 78%;
