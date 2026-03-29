@@ -5,11 +5,12 @@ import { Footer } from '@/components/layout/Footer'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
 
 const services = [
-  'Mobile App',
-  'Website Design',
+  'Web Design & Development',
+  'Website Revamp',
   'Branding',
-  'Web Development',
-  'Logo Design',
+  'Hosting Migration',
+  'SEO & Performance',
+  'Maintenance & Support',
 ]
 
 const budgetRanges = [
@@ -66,6 +67,7 @@ export default function Contact() {
           ...formData,
           services: selectedServices.join(', '),
           budget: selectedBudget,
+          _honey: '',
         }),
       })
 
@@ -129,6 +131,11 @@ export default function Contact() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-10">
+              {/* Honeypot — hidden from users, catches bots */}
+              <div aria-hidden="true" style={{ position: 'absolute', opacity: 0, height: 0, overflow: 'hidden', pointerEvents: 'none' }}>
+                <input type="text" name="_honey" tabIndex={-1} autoComplete="off" />
+              </div>
+
               <ScrollReveal>
                 <div>
                   <label htmlFor="name" className="text-sm font-semibold text-foreground">Name</label>
@@ -194,6 +201,9 @@ export default function Contact() {
                       </button>
                     ))}
                   </div>
+                  <p className="mt-3 font-body text-xs text-muted-foreground">
+                    Don&apos;t see what you need? Just mention it in your message and we&apos;ll work it out.
+                  </p>
                 </div>
               </ScrollReveal>
 
