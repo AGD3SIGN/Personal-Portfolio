@@ -10,10 +10,10 @@ const faqs = [
     question: "Do you use AI to build my site?",
     answer: "Yes — Since AI is becoming a big part of technology, I like to keep myself up-to-date. AI is part of my workflow for research, design ideation, and development, but it's a tool — not a replacement developer. Every decision is intentional, every line of code is reviewed, and the end result is built around your specific goals. It means faster turnaround without cutting corners on quality.",
   },
-  {
-    question: "How do you handle revisions?",
-    answer: "Every project includes a set number of revision rounds built into the scope. Anything beyond that is billed at an agreed hourly rate — no surprises.",
-  },
+  // {
+  //   question: "How do you handle revisions?",
+  //   answer: "Every project includes a set number of revision rounds built into the scope. Anything beyond that is billed at an agreed hourly rate — no surprises.",
+  // },
   {
     question: "Are you available right now, or is there a waitlist?",
     answer: "Yes, I am currently available! Availability will shift depending on active projects. The best way to find out is to reach out directly. If there's a wait, I'll give you an estimated start date so you can plan accordingly.",
@@ -28,12 +28,12 @@ const faqs = [
   },
   {
     question: "Who hosts the site after it's built?",
-    answer: "I host on my own managed servers. If something ever goes wrong, you're talking to me directly — not a support ticket queue.",
+    answer: "I host on my own managed servers. If something ever goes wrong, you're talking to me directly — not a support ticket queue. If you're currently with another host and want to switch, I'll handle the migration — making sure all your content is transferred over before the new site goes live.",
   },
-  {
-    question: "What's included in the quoted price?",
-    answer: "The quote covers everything in the agreed scope — design, development, and a set number of revisions. Anything added after scope is locked is handled as a change order.",
-  },
+  // {
+  //   question: "What's included in the quoted price?",
+  //   answer: "The quote covers everything in the agreed scope — design, development, and a set number of revisions. Anything added after scope is locked is handled as a change order.",
+  // },
   {
     question: "Are there ongoing costs after launch?",
     answer: "It depends on your setup. Hosting, domain renewal, and any third-party tools are separate costs. Ongoing maintenance and support are available as an add-on if you need them.",

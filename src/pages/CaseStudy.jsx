@@ -151,7 +151,7 @@ export default function CaseStudy() {
                   </div>
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-secondary">
                     <img
-                      src={project.galleryImages ? project.galleryImages.top[1] : asset('/images/project-payrole-phone.jpg')}
+                      src={project.galleryImages ? project.galleryImages.top[1] : asset('/images/placeholder.svg')}
                       alt="Project screenshot 2"
                       width={700}
                       height={525}
@@ -177,6 +177,172 @@ export default function CaseStudy() {
                   />
                 </div>
               </ScrollReveal>
+
+              {/* Brand Moodboard */}
+              {project.brandMoodboard && (
+                <ScrollReveal>
+                  <div className="mt-14">
+                    <h2 className="text-3xl font-bold tracking-tight text-foreground">Brand Identity</h2>
+
+                    {/* Color Palette */}
+                    <div className="mt-8">
+                      <p className="mb-4 text-xs font-bold uppercase tracking-widest text-muted-foreground">Color Palette</p>
+                      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                        {project.brandMoodboard.colors.map((color) => (
+                          <div key={color.hex} className="overflow-hidden rounded-xl border border-border">
+                            <div className="h-16" style={{ backgroundColor: color.hex }} />
+                            <div className="p-3">
+                              <p className="text-sm font-semibold text-foreground">{color.name}</p>
+                              <p className="font-body text-xs text-muted-foreground">{color.hex}</p>
+                              <p className="mt-0.5 font-body text-xs text-muted-foreground">{color.role}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Typography */}
+                    <div className="mt-10">
+                      <p className="mb-4 text-xs font-bold uppercase tracking-widest text-muted-foreground">Typography</p>
+                      <div className="grid gap-4 md:grid-cols-2">
+                        {project.brandMoodboard.typography.map((font) => (
+                          <div key={font.name} className="rounded-xl border border-border p-6">
+                            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">{font.role}</p>
+                            <p className="mt-3 text-4xl font-bold tracking-tight text-foreground">{font.name}</p>
+                            <p className="mt-3 font-body text-sm italic text-muted-foreground">&ldquo;{font.sample}&rdquo;</p>
+                            <p className="mt-2 font-body text-xs text-muted-foreground">{font.note}</p>
+                            <div className="mt-4 flex flex-wrap gap-2">
+                              {font.weights.map((w) => (
+                                <span key={w} className="rounded-full border border-border px-3 py-1 font-body text-xs text-muted-foreground">
+                                  {w}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Type Scale */}
+                    <div className="mt-10">
+                      <p className="mb-4 text-xs font-bold uppercase tracking-widest text-muted-foreground">Type Scale</p>
+                      <div className="overflow-hidden rounded-xl border border-border">
+                        {project.brandMoodboard.typeScale.map((item, i) => (
+                          <div
+                            key={item.level}
+                            className={`flex items-center justify-between gap-4 px-6 py-4 ${i !== 0 ? 'border-t border-border' : ''}`}
+                          >
+                            <div className="flex min-w-0 items-center gap-4">
+                              <span className="w-12 shrink-0 font-body text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                                {item.level}
+                              </span>
+                              <span className="truncate font-body text-sm text-foreground">
+                                {item.font} · {item.weight}
+                              </span>
+                            </div>
+                            <div className="flex shrink-0 items-center gap-6">
+                              <span className="hidden font-body text-xs text-muted-foreground sm:block">{item.use}</span>
+                              <span className="font-body text-sm font-semibold text-foreground">{item.size}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Buttons */}
+                    {project.brandMoodboard.buttons && (
+                      <div className="mt-10">
+                        <p className="mb-4 text-xs font-bold uppercase tracking-widest text-muted-foreground">Buttons</p>
+                        <div className="grid gap-4 sm:grid-cols-3">
+                          {project.brandMoodboard.buttons.map((btn) => (
+                            <div key={btn.label} className="overflow-hidden rounded-xl border border-border">
+                              <p className="px-5 pt-5 pb-4 text-xs font-bold uppercase tracking-widest text-muted-foreground">{btn.label}</p>
+                              <div className="flex items-center justify-center py-8" style={{ backgroundColor: project.brandMoodboard.previewColors?.bg }}>
+                                <button
+                                  type="button"
+                                  className="cursor-default rounded-xl px-5 py-2.5 text-sm font-semibold"
+                                  style={{ backgroundColor: btn.bg, color: btn.text, border: btn.border }}
+                                >
+                                  {btn.example}
+                                </button>
+                              </div>
+                              <p className="px-5 py-4 font-body text-xs text-muted-foreground">{btn.description}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Badges */}
+                    {project.brandMoodboard.badges && (
+                      <div className="mt-10">
+                        <p className="mb-4 text-xs font-bold uppercase tracking-widest text-muted-foreground">Badges</p>
+                        <div className="grid gap-4 sm:grid-cols-3">
+                          {project.brandMoodboard.badges.map((badge) => (
+                            <div key={badge.label} className="overflow-hidden rounded-xl border border-border">
+                              <p className="px-5 pt-5 pb-4 text-xs font-bold uppercase tracking-widest text-muted-foreground">{badge.label}</p>
+                              <div className="flex items-center justify-center py-8" style={{ backgroundColor: project.brandMoodboard.previewColors?.bg }}>
+                                <span
+                                  className="rounded-full px-3 py-1 text-xs font-bold"
+                                  style={{ backgroundColor: badge.bg, color: badge.text, border: badge.border }}
+                                >
+                                  {badge.example}
+                                </span>
+                              </div>
+                              <p className="px-5 py-4 font-body text-xs text-muted-foreground">{badge.description}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Border Radius */}
+                    {project.brandMoodboard.radii && (
+                      <div className="mt-10">
+                        <p className="mb-4 text-xs font-bold uppercase tracking-widest text-muted-foreground">Border Radius</p>
+                        <div className="grid grid-cols-5 gap-3">
+                          {project.brandMoodboard.radii.map((r) => (
+                            <div key={r.name} className="flex flex-col items-center gap-3">
+                              <div
+                                className="h-14 w-full"
+                                style={{ borderRadius: r.value, backgroundColor: project.brandMoodboard.previewColors?.accent, opacity: 0.15 + (project.brandMoodboard.radii.indexOf(r) * 0.17) }}
+                              />
+                              <div className="text-center">
+                                <p className="text-xs font-semibold text-foreground">{r.name}</p>
+                                <p className="font-body text-xs text-muted-foreground">{r.px}</p>
+                                <p className="mt-0.5 font-body text-[10px] text-muted-foreground leading-tight">{r.use}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Shadows */}
+                    {project.brandMoodboard.shadows && (
+                      <div className="mt-10">
+                        <p className="mb-4 text-xs font-bold uppercase tracking-widest text-muted-foreground">Shadows</p>
+                        <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+                          {project.brandMoodboard.shadows.map((shadow) => (
+                            <div key={shadow.name} className="flex flex-col items-center gap-4">
+                              <div className="w-full rounded-2xl p-4" style={{ backgroundColor: project.brandMoodboard.previewColors?.shadow }}>
+                                <div
+                                  className="h-16 w-full rounded-xl"
+                                  style={{ backgroundColor: project.brandMoodboard.previewColors?.shadow, boxShadow: shadow.css }}
+                                />
+                              </div>
+                              <div className="text-center">
+                                <p className="text-xs font-semibold text-foreground">{shadow.name}</p>
+                                <p className="mt-0.5 font-body text-xs text-muted-foreground">{shadow.use}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </ScrollReveal>
+              )}
 
               {/* Testimonial */}
               {project.testimonial && (
