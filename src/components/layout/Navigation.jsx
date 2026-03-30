@@ -124,13 +124,13 @@ export function Navigation() {
                       <span
                         className={`text-5xl font-bold tracking-tight transition-colors md:text-7xl ${
                           pathname === item.href
-                            ? 'text-primary'
-                            : 'text-primary/40 group-hover:text-primary'
+                            ? 'text-foreground'
+                            : 'text-muted-foreground group-hover:text-foreground'
                         }`}
                       >
                         {item.label}
                       </span>
-                      <span className="text-sm text-muted-foreground">
+                      <span className="text-sm text-primary">
                         ({item.number})
                       </span>
                     </div>
