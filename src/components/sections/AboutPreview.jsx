@@ -44,8 +44,8 @@ function StatCounter({ value, suffix, label }) {
   }, [value])
 
   return (
-    <div ref={ref} className="flex flex-col gap-3 border-l border-border pl-8 first:border-l-0 first:pl-0">
-      <p className="text-5xl font-bold tracking-tight text-foreground md:text-6xl">
+    <div ref={ref} className="flex flex-col gap-3 border-l border-border pl-4 lg:pl-8 lg:first:border-l-0 lg:first:pl-0">
+      <p className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
         {count.toLocaleString()}
         <span className="text-primary">{suffix}</span>
       </p>

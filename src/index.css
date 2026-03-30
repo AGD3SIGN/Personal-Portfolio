@@ -72,6 +72,8 @@
 
 html {
   transition: color 300ms ease, background-color 300ms ease;
+  background-color: hsl(var(--background));
+  overscroll-behavior-y: none;
 }
 
 ::-webkit-scrollbar {

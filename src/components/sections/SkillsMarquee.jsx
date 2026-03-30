@@ -1,7 +1,7 @@
 import {
-  Atom, FileCode2, FileType, Code2, Wind, Sparkles, Figma, GitBranch,
-  Github, Container, BookOpen, MousePointerClick, Terminal, Database,
-  Globe, Palette, Layers, Smartphone, Workflow, Chrome,
+  Atom, FileCode2, FileType, Code2, Wind, Sparkles, GitBranch,
+  Github, Container, BookOpen, MousePointerClick, Terminal,
+  Layers, Smartphone, Chrome, Bot, Cpu,
 } from 'lucide-react'
 import { ScrollReveal } from '@/components/layout/ScrollReveal'
 
@@ -12,19 +12,16 @@ const techStack = [
   { name: 'HTML/CSS', icon: Code2 },
   { name: 'Tailwind CSS', icon: Wind },
   { name: 'GSAP', icon: Sparkles },
-  { name: 'Figma', icon: Figma },
+  { name: 'Claude', icon: Bot },
+  { name: 'AI Tools', icon: Cpu },
   { name: 'Git', icon: GitBranch },
   { name: 'GitHub', icon: Github },
   { name: 'Docker', icon: Container },
   { name: 'Obsidian', icon: BookOpen },
   { name: 'Cursor', icon: MousePointerClick },
   { name: 'Terminal', icon: Terminal },
-  { name: 'SQL', icon: Database },
-  { name: 'REST APIs', icon: Globe },
-  { name: 'Sass', icon: Palette },
   { name: 'Framer Motion', icon: Layers },
   { name: 'Responsive Design', icon: Smartphone },
-  { name: 'CI/CD', icon: Workflow },
   { name: 'Chrome DevTools', icon: Chrome },
 ]
 
@@ -37,7 +34,7 @@ function SkillPill({ item }) {
 
   return (
     <div className="flex shrink-0 cursor-default items-center gap-3 rounded-full border border-border bg-card px-5 py-3 transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground [&:hover>svg]:text-primary-foreground [&:hover>span]:text-primary-foreground">
-      <Icon className="h-4 w-4 text-muted-foreground transition-colors" strokeWidth={1.5} />
+      <Icon className="h-4 w-4 text-primary transition-colors" strokeWidth={1.5} />
       <span className="text-sm font-medium text-foreground transition-colors">{item.name}</span>
     </div>
   )
