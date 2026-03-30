@@ -124,8 +124,8 @@ export function Navigation() {
                       <span
                         className={`text-5xl font-bold tracking-tight transition-colors md:text-7xl ${
                           pathname === item.href
-                            ? 'text-foreground'
-                            : 'text-muted-foreground group-hover:text-foreground'
+                            ? 'text-primary'
+                            : 'text-primary/40 group-hover:text-primary'
                         }`}
                       >
                         {item.label}
